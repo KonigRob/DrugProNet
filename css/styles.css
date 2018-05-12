@@ -1,0 +1,550 @@
+/* styles2.css 
+external css for DrugKiNET website
+04.25.2013
+James Chen
+*/
+
+/* ======================================================== general styles ============================================================== */
+* {
+    margin: 0;
+}
+
+html, body {
+    height: 100%;
+    width: 1000px;
+    font-family: arial, verdannada, san-serif;
+    color: #C0C0C0;
+    background-image: url('../images/footer.jpg');
+    background-repeat: repeat-y;
+    background-color: black;
+}
+
+p {
+    line-height: 150%;
+    font-size: 15px;
+}
+   
+table {
+    border: 1px;
+    table-layout: fixed;
+    width: auto;
+}
+
+a:link {
+    text-decoration: none;
+	color: #669eff;
+}
+
+a:hover { 
+	color:#668cff; 
+	text-decoration: underline; 
+}
+
+input[type="checkbox"] {
+    display:none;
+}
+
+input[type="checkbox"] + label{
+    width:19px;
+    height:19px;
+    margin:1px 6px 0px 0px;
+    vertical-align:middle;
+    background:url(../images/unchecked.png) left top no-repeat;
+    cursor:pointer;
+    font-size: 14px;
+}
+
+input[type="checkbox"]:checked + label {
+    background:url(../images/checked.png) left top no-repeat;
+    font-size: 14px;
+}
+
+/* ======================================================== classes ============================================================== */
+.emptyBoxMessage
+{
+    color: Red;
+    }
+
+.tableDescription
+{
+    padding: 5px 5px 0px 10px;
+    width: 600px;
+    float: left;
+    }
+
+.summaryTableDiv {
+    padding: 0px 0px 0px 11px;
+    width: 639px;
+    float: left;
+    margin-bottom: 30px;
+    height:250px;
+    overflow:auto;
+}
+
+.summaryTableDivH {
+    padding: 12px 0px 0px 10px;
+    width: 640px;
+    float: left;
+}
+   
+   
+.headerCell
+{
+    border: 1px solid black;
+    width: 160px;
+    font-size: 13px;
+    color: Black;
+    font-weight:500;
+    background-color: #DFDFFD;
+    padding: 5px 15px 5px 15px;
+    }
+
+.summaryCell
+{
+    text-align:center;
+    background-color:White;
+    width: 160px;
+    color:Black;
+    font-size:12px;
+    padding: 3px 5px 5px 3px;
+    }
+    
+.summaryCellColored
+{
+    text-align:center;
+    background-color:#F3F3FE;
+    color:Black;
+    font-size:12px;
+    width: 160px;
+    padding: 3px 5px 5px 3px;
+    }
+
+.wrapper {
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    margin: 0 auto -30px; /* the bottom margin is the negative value of the footer's height */
+}
+
+.footer, .push {
+    clear: both;
+    height: 30px; /* .push must be the same height as .footer */
+    width: 1000px;
+}
+
+.footer {
+    background-image: url('../images/footer.jpg');
+}
+
+.content {
+    clear: both;
+}
+
+.pageContent {
+    padding-top: 20px;
+}
+
+.parHead {
+    color: #FC0;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.parText {
+    color: #738569;
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+.imageLabelDiv {
+    margin-top: 65px;
+    color: #808080;
+    margin-bottom: 10px;
+}
+
+.labelDiv {
+    clear: both;
+    width: 174px;
+    text-align: right;
+    float: left;
+    color: #708591;
+    margin-bottom: 20px;
+    padding: 10px 8px;
+    font-size: 14px;
+}
+
+.downloadContainer {
+    width: 760px;
+    float: left;
+}
+.downloadContainer3 {
+    width: 760px;
+    float: left;
+    margin-bottom: 35px;
+}
+
+.downloadPlaceHolder {
+    clear: both;
+    width: 210px;
+    float: left;
+}
+
+.labelDivThick {
+    clear: both;
+    width: 174px;
+    text-align: right;
+    float: left;
+    color: #708591;
+    font-weight: bold;
+    margin-bottom: 20px;
+    padding: 10px 8px;
+}
+
+.converterDiv 
+{
+    margin-bottom: 15px;
+}
+
+.infoDiv {
+    padding: 10px 20px;
+    width: 760px;
+    float: left;
+    margin-bottom: 20px;
+}
+
+.imageDiv 
+{
+    padding-left:0px;
+    padding-top: 10px;
+    width: 400px;
+    float: right;
+    margin-bottom: 20px;
+}
+
+.ligandImageDiv 
+{
+    padding-left:0px;
+    padding-right:0px;
+    padding-top: 10px;
+    width: 400px;
+    float: right;
+    margin-bottom: 20px;
+}
+
+
+.infoDivTest {
+    float: left;
+    margin-bottom: 20px;
+    overflow: scroll;
+    height: 600px;
+    max-width: 760px;
+}
+
+.compoundInfo
+{
+    width: 760px;
+    padding: 0px 20px;
+    float: left;
+}
+
+.compoundInfoShort
+{
+    width: 380px;
+    padding: 0px 20px;
+    float: left;
+}
+
+.compoundLabel
+{
+    clear: both;
+    width: 174px;
+    text-align: right;
+    float: left;
+    color: #708591;
+    padding: 0px 8px;
+    font-size: 15px;
+}
+
+.infoDiv2 {
+    padding: 10px 20px;
+    width: 380px;
+    float: left;
+    margin-bottom: 20px;
+}
+
+.imageDiv {
+    float: right;
+}
+
+.page_info {
+    padding: 10px 20px;
+    width: 450px;
+    float: left;
+    margin-bottom: 20px;
+    margin-top: 12px;
+}
+
+.page_info_label {
+    margin-top: 12px;
+    clear: both;
+    width: 174px;
+    text-align: right;
+    float: left;
+    color: #708591;
+    font-weight: bold;
+    margin-bottom: 20px;
+    padding: 10px 8px;
+}
+
+.ad_temp {
+    width: 300px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    float: right;
+}
+
+.mainNavLink {
+    float: left;
+}
+
+.columnName {
+    width: 200px;
+    color: #738569;
+    font-size: 15px;
+    line-height: 150%;
+}
+
+.button {
+    border-radius: 4px;
+    float: left;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+.input {
+    border-radius: 4px;
+}
+
+.resultLabel {
+    line-height: 150%;
+    font-size: 15px;
+}
+
+.resultLabelCompoundPage 
+{
+    line-height: 150%;
+    font-size: 15px;
+    word-wrap:break-word;
+}
+
+.downloadDisclaimer {
+    line-height: 150%;
+    font-size: 15px;
+    color: #738569;
+    float: left;
+    margin-left: 8px;
+}
+
+.decisionRegressionContainer {
+    float: left;
+    width: 507px;
+}
+
+.decisionContainer {
+    float: left;
+    width: 253px;
+}
+
+.regressionContainer {
+    float: left;
+    width: 253px;
+}
+
+.converterContainer {
+    float: left;
+    width: 253px;
+}
+
+/*AutoComplete flyout */
+.autocomplete_completionListElement {
+    margin: 0px!important;
+    background-color: inherit;
+    color: windowtext;
+    border: buttonshadow;
+    border-width: 1px;
+    border-style: solid;
+    cursor: default;
+    overflow: scroll;
+    font-family: Arial;
+    font-size: small;
+    text-align: left;
+    list-style-type: none;
+    max-height: 200px;
+}
+
+/* AutoComplete highlighted item */
+.autocomplete_highlightedListItem {
+    background-color: #ffff99;
+    color: black;
+    padding: 4px;
+    border-bottom: dotted grey 1px;
+}
+
+/* AutoComplete item */
+.autocomplete_listItem {
+    background-color: window;
+    color: windowtext;
+    padding: 4px;
+    border-bottom: dotted grey 1px;
+}
+
+/* ======================================================== IDs ============================================================== */
+#header {
+    width: 1000px;
+    height: 144px;
+}
+
+#headerSlice2 {
+    float: left;
+}
+
+#headerSlice3 {
+    float: left;
+}
+
+#mainNav {
+    clear: both;
+    width: 1000px;
+    height: 40px;
+}
+
+#dpNavContainer {
+    width: 580px;
+    height: 40px;
+    float: left;
+    background-image: url('../images/dpBG.jpg');
+}
+
+#dpLabel {
+    width: 300px;
+    float: left;
+    text-align: center;
+    padding-top: 10px;
+    font-weight: bold;
+    font-size: 14px;
+    color: #738569;
+}
+
+#dbWrapper {
+    width: 100px;
+    float: left;
+}
+
+#subNavContainer {
+    width: 400px;
+    height: 33px;
+    float: left;
+    padding-left: 20px;
+    padding-top: 12px;
+    background-image: url('../images/dpBG.jpg');
+}
+
+#subNav li {
+    float: left;
+}
+
+#subNav a {
+    color: #FC0;
+    font-size: 14px;
+}
+
+#sNav1 {
+    border-right: solid #FC0 2px;
+    padding-right: 5px;
+    text-align: right;
+}
+#sNav4 {
+    border-right: solid #FC0 2px;
+    padding-right: 5px;
+    padding-left:5px;
+}
+
+#sNav2 {
+    border-right: solid #FC0 2px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+#sNav3 {
+    padding-left: 5px;
+}
+
+#bottomSpacer {
+    width: 40px;
+    float: left;
+}
+
+#bottomNavContainer {
+    width: 150px;
+    float: left;
+}
+
+#bottomNavBar {
+    margin-left: 20px;
+}
+
+#bottomNavBar li {
+    float: left;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-weight: bold;
+}
+
+#bNav1 {
+    border-right: solid orange 2px;
+}
+
+#bottomNavBar a {
+    display: block;
+    color: #FC0;
+    font-size: 14px;
+}
+
+#CPinfo {
+    width: 810px;
+    float: left;
+    text-align: center;
+    color: #738569;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+#topRight {
+    float: left;
+}
+
+#topLeft {
+    float: left;
+    width: 700px;
+}
+
+#adCompoundPage {
+    width: 300px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#CompoundStructureLabel {
+    line-height: 150%;
+    font-size: 14px;
+    font-family: arial, verdannada, san-serif;
+    color: #708591;
+}
+
+#CreditLabel {
+    margin-top: 20px;
+}
+
+#CreditInfo {
+    margin-top: 20px;
+}
