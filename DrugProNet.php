@@ -157,11 +157,10 @@
                 <ul id="MenuBar1" class="MenuBarHorizontal">
                     <li><a class="MenuBarItemSubmenu" href="#">Hover over to view options</a>
                         <ul>
-                            <li><a class="MenuBarItemSubmenu" href="KinaseCompoundQuery.aspx">Kinase-focused Compound Identification</a></li>
-                            <li><a class="MenuBarItemSubmenu" href="CompoundKinaseQuery.aspx">Compound-focused Kinase Identification</a></li>
-                            <li><a class="MenuBarItemSubmenu" href="CompoundInfoQuery.aspx">Compound Information</a></li>
-                            <li><a class="MenuBarItemSubmenu" href="KinaseInhibitorPredictionQuery.aspx">Kinase Inhibitor Prediction</a></li>
-                            <li><a class="MenuBarItemSubmenu" href="KinaseDrugInteraction.aspx">Kinase Drug 3D Interaction</a></li>
+                            <li><a class="MenuBarItemSubmenu" href="#"></a></li>
+                            <li><a class="MenuBarItemSubmenu" href="#"></a></li>
+                            <li><a class="MenuBarItemSubmenu" href="#"></a></li>
+                            <li><a class="MenuBarItemSubmenu" href="#"></a></li>
                         </ul>
                     </li>
                 </ul>
@@ -172,7 +171,7 @@
         <div id="subNavContainer">
             <!-- sub navigation bar placed beside the dropdown navigation -->
             <ul id="subNav" class="">
-                <li id="sNav1" style="color:#8F72C5; font-weight:bold; font-size:13px">Updated: 2017 Aug. 1</li>
+                <li id="sNav1" style="color:#8F72C5; font-weight:bold; font-size:13px">Updated: 2018 May</li>
                 <li id="sNav2"><a href="Default.aspx">Home</a></li>
                 <li id="sNav2"><a href="http://www.kinexus.ca">Kinexus</a></li>
                 <li id="sNav4"><a href="http://www.kinexus.ca/contact/contact.html">Contact</a></li>
@@ -221,39 +220,25 @@ function WebForm_OnSubmit() {
 //]]>
 </script>
 
-<div class="aspNetHidden">
-	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="B101F61B" />
-	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdABZ3RhjunoxvNRUvgZa6XohzAHqGNd/avlSD9K07nE1KkYWQWhUHhiQxEZvMxj4vrrsT0yP3mE9o2BBF0hiyE/owbwMV7RUF28LbAC/Pag5vr+eNBB9r0EJt5g/3g9nVQjfmBEuOjfwpaSNDDu0UoTCdAdJo5UkkT988kYWmc8dNhN+dUcOWfaCMrH2NHWdq31b6D6kDq7MOAiEnHxv4fQiWVbVflkuvAVojRplgvkk/zEZhKuZyxcY/ltHoEwtVeFTKmk6pyK6fMx2gXmqG5J2R/ZLPWQRQIMJtu66sp74fDNTZdpIvsWK//W2VLOXY8PKLx+rf3kwe2wCpQ+KotudPiq161qFnVp1dNHc/g8N83tygWKeNA96c6IDO/WQtnmgM4fbIuuDjzO0z9csVy3cTIxetHLLeCYcg7+ZdZkZGU2UWiiF0kfivlLtvY5o9Wk3Mghq87X0ljhASk8ns4URdNDSTFPVW8R9ULnA+zo5fDM/SkDO0hOug/5H5f9Z9gts=" />
-</div>
-            <!-- form to contain all the asp content -->
-
-            <script type="text/javascript">
-                //<![CDATA[
-                    Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager2', 'Form1', ['tctl00$ContentPlaceHolder1$up1','ContentPlaceHolder1_up1','tctl00$ContentPlaceHolder1$UpdateDrugList','ContentPlaceHolder1_UpdateDrugList'], ['ctl00$ContentPlaceHolder1$Timer1','ContentPlaceHolder1_Timer1','ctl00$ContentPlaceHolder1$KinaseSpecTextbox','ContentPlaceHolder1_KinaseSpecTextbox'], [], 90, 'ctl00');
-                //]]>
-            </script>
-
-            <div class="content">
-
+ <div class="content">
     <div id="pageContent">
         <div class="page_info_label">
             <p>Query Type</p>
         </div>
 
         <div id="p1" class="page_info">
-            <p class="parHead">Kinase Drug 3D Interaction Identification</p>
+            <p class="parHead">Drug Information</p>
             <p class="parText">
-This query provides listings of atom-to-atom interaction pairs between a kinase and a small drug molecule.
-Interactions are defined by distance between the atoms, which are measured in Angstroms. The data in this database are extracted
-                from coordinate information of co-crystallization files in the RCSB PDB Protein Data Bank. The Kinase Drug Interaction database currently
-                contains data from 2273 co-crystallization files.
+                This Query provides detailed information on over 2000 compounds that have been experimentally identified as
+                inhibitors of one or more human proteins. Follow the instructions below to retrieve information on a specific
+                drug of interest.
             </p>
         </div>
 
         <div id="ad" class="ad_temp">
             <span id="ContentPlaceHolder1_Timer1" style="visibility:hidden;display:none;"></span>
             <div id="ContentPlaceHolder1_up1">
-                    <a id="ContentPlaceHolder1_AdRotator1" href="http://www.kinexus.ca/ourServices/immunoblotting/custom_profiling/custom_profiling.html" target="_blank"><img src="/images/10MY25WebsiteBannerAds-9v0.1.jpg" alt="Need to inexpensively and rapidly validate gene or protein microarray data? Try our Custom Kinetworks Multi-immunoblotting Services" /></a>
+                    <a id="ContentPlaceHolder1_AdRotator1" href="http://www.kinexus.ca/ourServices/immunoblotting/custom_profiling/custom_profiling.html" target="_blank"><img src="/images/10MY25WebsiteBannerAds-17v0.1.jpg" alt="Need to inexpensively and rapidly validate gene or protein microarray data? Try our Custom Kinetworks Multi-immunoblotting Services" /></a>
             </div>
         </div>
 
@@ -262,7 +247,7 @@ Interactions are defined by distance between the atoms, which are measured in An
         </div>
 
         <div id="p2" class="infoDiv">
-            <p class="parHead">Step 1 - Protein Kinase Specification</p>
+            <p class="parHead">Step 1 - Drug Specification</p>
             <p class="parText">
                 Please provide the short/full name or UniProt ID for the human kinase of interest as a search term.
             </p>
@@ -278,81 +263,18 @@ Interactions are defined by distance between the atoms, which are measured in An
             <p class="parText">&nbsp;</p>
         </div>
         <div id="p3" class="infoDiv">
-            <p class="parHead">Step 2 - Drug Specification</p>
-            <p class="parText">Use the pull-down menu below to select for the drug of interest. </p>
+            <p class="parHead">Step 2 - Retrieve Compound Information</p>
+            <p class="parText">Click on the buttons below to retrieve information on the compound of interest or to reset the parameters for the new query.</p>
             <p class="parText">
             <div id="ContentPlaceHolder1_UpdateDrugList">
-
-                <select name="ctl00$ContentPlaceHolder1$drugsForKinase" id="ContentPlaceHolder1_drugsForKinase">
-
-	</select>
-
-</div>
-            </p>
-        </div>
-
-        <div class="labelDiv">
-            <p class="parText">&nbsp;</p>
-        </div>
-        <div id="p4" class="infoDiv">
-            <p class="parHead">Step 3 - Interaction Distance</p>
-            <p class="parText">Use the pull-down menu below to set the maximum value for interaction distance (in Angstroms) between atoms. </p>
-            <p class="parText">
-
-                <select name="ctl00$ContentPlaceHolder1$DataOutputDropdown" id="ContentPlaceHolder1_DataOutputDropdown">
-                    <option value="1">1</option>
-                    <option value="1.5">1.5</option>
-                    <option value="2">2</option>
-                    <option value="2.5">2.5</option>
-                    <option value="3">3</option>
-                    <option value="3.5">3.5</option>
-                    <option value="4">4</option>
-                    <option value="4.5">4.5</option>
-                    <option selected="selected" value="5">5</option>
-                    <option value="5.5">5.5</option>
-                    <option value="6">6</option>
-                    <option value="6">7</option>
-                    <option value="6">7.5</option>
-                </select>
-            </p>
-        </div>
-
-        <div class="labelDiv">
-            <p class="parText">&nbsp;</p>
-        </div>
-        <div id="p5" class="infoDiv">
-            <p class="parHead">Step 4 - Display Parameter Specification</p>
-            <p class="parText">Boxes that are marked are activated to display. Click on boxes to change status.</p>
-            <div id="ContentPlaceHolder1_Panel1" style="width:341px;">
-                <table id="ContentPlaceHolder1_DisplayParametersChecklist">
-                    <tr>
-                        <td><span class="aspNetDisabled" style="display:none;"><input id="ContentPlaceHolder1_DisplayParametersChecklist_0" type="checkbox" name="ctl00$ContentPlaceHolder1$DisplayParametersChecklist$0" disabled="disabled" value="PDB_Entry" /><label for="ContentPlaceHolder1_DisplayParametersChecklist_0">     Show PDB entry code</label></span></td>
-                    </tr><tr>
-                        <td><span class="aspNetDisabled" style="display:none;"><input id="ContentPlaceHolder1_DisplayParametersChecklist_1" type="checkbox" name="ctl00$ContentPlaceHolder1$DisplayParametersChecklist$1" checked="checked" disabled="disabled" value="Distance" /><label for="ContentPlaceHolder1_DisplayParametersChecklist_1">     Show atom-to-atom interaction distances</label></span></td>
-                    </tr><tr>
-                        <td><span><input id="ContentPlaceHolder1_DisplayParametersChecklist_2" type="checkbox" name="ctl00$ContentPlaceHolder1$DisplayParametersChecklist$2" checked="checked" value="Kinase_Chain" /><label for="ContentPlaceHolder1_DisplayParametersChecklist_2">     Show kinase chain</label></span></td>
-                    </tr><tr>
-                        <td><span><input id="ContentPlaceHolder1_DisplayParametersChecklist_3" type="checkbox" name="ctl00$ContentPlaceHolder1$DisplayParametersChecklist$3" checked="checked" value="Kinase_Atom" /><label for="ContentPlaceHolder1_DisplayParametersChecklist_3">     Show kinase atoms</label></span></td>
-                    </tr><tr>
-                        <td><span><input id="ContentPlaceHolder1_DisplayParametersChecklist_4" type="checkbox" name="ctl00$ContentPlaceHolder1$DisplayParametersChecklist$4" checked="checked" value="Kinase_Residue" /><label for="ContentPlaceHolder1_DisplayParametersChecklist_4">     Show kinase residues</label></span></td>
-                    </tr><tr>
-                        <td><span><input id="ContentPlaceHolder1_DisplayParametersChecklist_5" type="checkbox" name="ctl00$ContentPlaceHolder1$DisplayParametersChecklist$5" checked="checked" value="Kinase_Residue#" /><label for="ContentPlaceHolder1_DisplayParametersChecklist_5">     Show kinase residue numbers</label></span></td>
-                    </tr><tr>
-                        <td><span class="aspNetDisabled" style="display:none;"><input id="ContentPlaceHolder1_DisplayParametersChecklist_6" type="checkbox" name="ctl00$ContentPlaceHolder1$DisplayParametersChecklist$6" disabled="disabled" value="Compound_Name" /><label for="ContentPlaceHolder1_DisplayParametersChecklist_6">     Show drug short name</label></span></td>
-                    </tr><tr>
-                        <td><span><input id="ContentPlaceHolder1_DisplayParametersChecklist_7" type="checkbox" name="ctl00$ContentPlaceHolder1$DisplayParametersChecklist$7" checked="checked" value="Compound_Atom" /><label for="ContentPlaceHolder1_DisplayParametersChecklist_7">     Show drug atoms</label></span></td>
-                    </tr>
-                </table>
             </div>
+            </p>
         </div>
 
         <div class="labelDiv">
             <p class="parText">&nbsp;</p>
         </div>
-        <div id="p6" class="infoDiv">
-            <p class="parHead">Step 5 - Report Generation</p>
-            <p class="parText">Click on boxes below to produce a custom table with results or to reset the parameters.</p>
-            <input type="submit" name="ctl00$ContentPlaceHolder1$GenerateTableButton" value="Generate Table" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ContentPlaceHolder1$GenerateTableButton&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, false))" id="ContentPlaceHolder1_GenerateTableButton" class="button" />
+            <input type="submit" name="ctl00$ContentPlaceHolder1$GenerateTableButton" value="Retrieve Information" onclick="WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ContentPlaceHolder1$GenerateTableButton&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, false))" id="ContentPlaceHolder1_GenerateTableButton" class="button" />
             &nbsp;&nbsp;&nbsp;
             <input type="reset" value="Reset" class="button" />
         </div>
@@ -428,7 +350,7 @@ document.getElementById('ContentPlaceHolder1_CompoundTextboxValidator').dispose 
         <!-- end of the bottom nav bar -->
 
         <div id="CPinfo">
-            <p>Copyright &copy; 2017 Kinexus Bioinformatics Corporation. All rights reserved.</p>
+            <p>Copyright &copy; 2018 Kinexus Bioinformatics Corporation. All rights reserved.</p>
         </div>
     </div>
     <!-- end of footer -->
