@@ -10,6 +10,9 @@ html, body {
     background-color: black;
 }
 
+td {
+    height: 40px;
+}
 .colorChange {
     color: #738569;
 }
@@ -111,7 +114,7 @@ html, body {
     padding: 10px 0;
 }
 
-.subLabels,columnName {
+.subLabels,.columnName {
     height: 26px;
     font-weight: normal;
 }

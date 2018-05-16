@@ -103,26 +103,64 @@
         <div class="labelDivThick">
             <p>NomenClature</p>
         </div>
-        <div class="subLabels">
-            <p>Protein ShortName:</p>
-            <p>Protein FullName:</p>
-            <span class="expand_row"><p>Alias:</p></span>
-            <p>Protein-type:</p>
-            <p>Kinase-group:</p>
-            <p>Kinase-family:</p>
-            <p>Kinase-subfamily:</p>
-        </div>
 
-        <!--Results(Right side)-->
-        <div class="result_info">
-            <p class="resultText">ABL1</p>
-            <p class="resultText">Abelson murine leukemia viral oncogene homologue 1 </p>
-            <span class="expand_row"><p class="resultText">Abelson murine leukemia viral oncogene 1; ABL; C-ABL; EC 2.7.10.2; JTK7; P150; V-abl Abelson murine leukemia viral oncogene 1</p></span>
-            <p class="resultText">Protein kinase - Non-receptor-tyrosine kinase </p>
-            <p class="resultText">TK</p>
-            <p class="resultText">Abl</p>
-            <p class="resultText">N/A</p>
-        </div>
+        <table class="float-clear">
+            <tr>
+                <td class="columnName">Protein ShortName:</td>
+                <td>
+                    <span id="ContentPlaceHolder1_ProteinName" class="resultLabel">DDR2</span></td>
+            </tr>
+            <tr>
+                <td class="columnName">Protein FullName:</td>
+                <td>
+                    <span id="ContentPlaceHolder1_ProteinFullName" class="resultLabel">Discoidin domain receptor-tyrosine kinase-2</span></td>
+            </tr>
+            <tr>
+                <td class="columnName">Alias:</td>
+                <td>
+                    <span id="ContentPlaceHolder1_Alias" class="resultLabel">Discoidin domain receptor 2; Discoidin domain receptor tyrosine kinase 2; EC 2.7.1.112; EC 2.7.10.1; Neurotrophic tyrosine kinase, receptor-related 3; NTRKR3; Receptor protein-tyrosine kinase TKT; TKT; TYRO10; Tyrosine-protein kinase TYRO 10</span></td>
+            </tr>
+            <tr>
+                <td class="columnName">UniProt ID:</td>
+                <td>
+                    <span id="ContentPlaceHolder1_UniProt_ID" class="resultLabel">Q16832</span></td>
+            </tr>
+            <tr>
+                <td class="columnName">NCBI ID:</td>
+                <td>
+                    <span id="ContentPlaceHolder1_NCBI_ID" class="resultLabel">CAA52777.1</span></td>
+            </tr>
+            <tr>
+                <td class="columnName">Kinase Type:</td>
+                <td>
+                    <span id="ContentPlaceHolder1_KinaseType" class="resultLabel">Protein-tyrosine kinase</span></td>
+            </tr>
+            <tr>
+                <td class="columnName">Kinase Group:</td>
+                <td>
+                    <span id="ContentPlaceHolder1_KinaseGroup" class="resultLabel">TK</span></td>
+            </tr>
+            <tr>
+                <td class="columnName">Kinase Family:</td>
+                <td >
+                    <span id="ContentPlaceHolder1_KinaseFamily" class="resultLabel">DDR</span></td>
+            </tr>
+            <tr>
+                <td class="columnName">Kinase Subfamily:</td>
+                <td>
+                    <span id="ContentPlaceHolder1_KinaseSubfamily" class="resultLabel"></span></td>
+            </tr>
+            <tr>
+                <td class="columnName">Number AA:</td>
+                <td>
+                    <span id="ContentPlaceHolder1_NumberAA" class="resultLabel">855</span></td>
+            </tr>
+            <tr>
+                <td class="columnName">Molecular Mass (Da):</td>
+                <td>
+                    <span id="ContentPlaceHolder1_MolecularMassDa" class="resultLabel">96736</span></td>
+            </tr>
+        </table>
         <!-----------NomenClature End------------->
 
         <!-------------Gene Ontology Terms--------------->
@@ -189,63 +227,7 @@
         </div>
         <!-----------Specific Infor End------------->
 
-        <table>
-            <tr>
-                <td class="columnName">Protein Name:</td>
-                <td>
-                    <span id="ContentPlaceHolder1_ProteinName" class="resultLabel">DDR2</span></td>
-            </tr>
-            <tr>
-                <td class="columnName">Protein Full Name:</td>
-                <td>
-                    <span id="ContentPlaceHolder1_ProteinFullName" class="resultLabel">Discoidin domain receptor-tyrosine kinase-2</span></td>
-            </tr>
-            <tr>
-                <td class="columnName">Alias:</td>
-                <td>
-                    <span id="ContentPlaceHolder1_Alias" class="resultLabel">Discoidin domain receptor 2; Discoidin domain receptor tyrosine kinase 2; EC 2.7.1.112; EC 2.7.10.1; Neurotrophic tyrosine kinase, receptor-related 3; NTRKR3; Receptor protein-tyrosine kinase TKT; TKT; TYRO10; Tyrosine-protein kinase TYRO 10</span></td>
-            </tr>
-            <tr>
-                <td class="columnName">UniProt ID:</td>
-                <td>
-                    <span id="ContentPlaceHolder1_UniProt_ID" class="resultLabel">Q16832</span></td>
-            </tr>
-            <tr>
-                <td class="columnName">NCBI ID:</td>
-                <td>
-                    <span id="ContentPlaceHolder1_NCBI_ID" class="resultLabel">CAA52777.1</span></td>
-            </tr>
-            <tr>
-                <td class="columnName">Kinase Type:</td>
-                <td>
-                    <span id="ContentPlaceHolder1_KinaseType" class="resultLabel">Protein-tyrosine kinase</span></td>
-            </tr>
-            <tr>
-                <td class="columnName">Kinase Group:</td>
-                <td>
-                    <span id="ContentPlaceHolder1_KinaseGroup" class="resultLabel">TK</span></td>
-            </tr>
-            <tr>
-                <td class="columnName" style="height: 17px">Kinase Family:</td>
-                <td style="height: 17px">
-                    <span id="ContentPlaceHolder1_KinaseFamily" class="resultLabel">DDR</span></td>
-            </tr>
-            <tr>
-                <td class="columnName">Kinase Subfamily:</td>
-                <td>
-                    <span id="ContentPlaceHolder1_KinaseSubfamily" class="resultLabel"></span></td>
-            </tr>
-            <tr>
-                <td class="columnName">Number AA:</td>
-                <td>
-                    <span id="ContentPlaceHolder1_NumberAA" class="resultLabel">855</span></td>
-            </tr>
-            <tr>
-                <td class="columnName">Molecular Mass (Da):</td>
-                <td>
-                    <span id="ContentPlaceHolder1_MolecularMassDa" class="resultLabel">96736</span></td>
-            </tr>
-        </table>
+
 
 
     </div>
