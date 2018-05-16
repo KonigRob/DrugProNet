@@ -6,6 +6,7 @@
  * Time: 11:35 AM
  */
 ?>
+<<<<<<< HEAD
 
 <!doctype html>
 <html>
@@ -359,5 +360,25 @@ document.getElementById('ContentPlaceHolder1_CompoundTextboxValidator').dispose 
         var MenuBar1 = new Spry.Widget.MenuBar("MenuBar1", { imgDown: "SpryAssets/SpryMenuBarDownHover.gif", imgRight: "SpryAssets/SpryMenuBarRightHover.gif" });
     </script>
 
+=======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>
+		DrugProNet
+	</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	
+</head>
+<body>
+	<div>
+		<div id="header">
+			<a href="DrugProNet.php" target="_blank">
+				<img src="images/DrugProNETBanner.jpg">
+			</a>
+		</div>
+	</div>
+>>>>>>> 8d231c67e2237c05306d805df38b9c7d2f8fcd41
 </body>
 </html>
