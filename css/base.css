@@ -1,0 +1,166 @@
+/*==============================General Settings===============================*/
+html, body {
+    width: 1000px;
+    height: 100%;
+    font-family: arial, verdannada, san-serif;
+    margin: 0;
+    min-height: auto;
+    background-image: url('../images/footer.jpg');
+    background-repeat: repeat-y;
+    background-color: black;
+}
+
+.colorChange {
+    color: #738569;
+}
+.float-clear {
+    clear: both;
+}
+
+
+/*==============================Header section===============================*/
+.navBar {
+    height: 40px;
+    width: 1000px;"
+}
+
+.queryBarContainer {
+    height: 40px;
+    width: 1000px;
+    border-bottom: lightskyblue solid 1px;
+}
+
+.queryBarDropDownContainer {
+    width: 580px;
+    height: 40px;
+    float: left;
+}
+
+.queryBarText {
+    float:left;
+    width:300px;
+    color:#738569;
+    text-align: center;
+    padding-top: 10px;
+    font-weight: bold;
+    font-size: 14px; line-height: 14px
+}
+
+.dropdown {
+    float:left;
+    padding: 3.6px 9px 3.6px 9px;
+}
+
+.dropdown-toggle {
+    width: 240px;
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+    font-size: 12px;
+    text-align: left;
+    margin-top: 4px;
+}
+
+
+/*==============================Result Page=====================================*/
+.content {
+    clear: both;
+}
+
+.pageContent {
+    padding-top: 20px;
+}
+
+.page_info {
+    padding: 10px 20px;
+    width: 450px;
+    float: left;
+    margin-left: 10px;
+    margin-bottom: 20px;
+    margin-top: 12px;
+}
+
+.page_info_label {
+    margin-top: 12px;
+    clear: both;
+    width: 174px;
+    text-align: right;
+    float: left;
+    color: #708591;
+    font-weight: bold;
+    margin-bottom: 20px;
+    padding: 10px 8px;
+}
+/****Rotate ad****/
+.ad_temp {
+    width: 300px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    float: right;
+}
+/****Page left, each heading****/
+.labelDivThick, .subLabels, .columnName {
+    clear: both;
+    width: 174px;
+    text-align: right;
+    float: left;
+    color: #708591;
+    font-weight: bold;
+    margin: 0;
+    padding: 10px 0;
+}
+
+.subLabels,columnName {
+    height: 26px;
+    font-weight: normal;
+}
+.infoDiv {
+    padding: 10px 20px;
+    width: 760px;
+    float: left;
+    margin-bottom: 20px;
+}
+
+.parHead {
+    color: #FC0;
+    margin-bottom: 8px;
+    font-weight: bold;
+    height: 16px;
+}
+
+.parText {
+    color: #738569;
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+.result_info {
+    padding: 0px 20px;
+    width: 800px;
+    float: left;
+    margin-left: 10px;
+    margin-bottom: 20px;
+    margin-top: 12px;
+}
+/****Results from the Database****/
+.resultText, .resultLabel {
+    color: #c5c5c4;
+    font-size: 15px;
+    margin-top: 2px;
+    margin-bottom: 14px;
+    margin-left: 50px;
+    height: 26px;
+}
+
+.expand_row p { /*For the result wiht long description*/
+    height: 36px;
+}
+
+.result_GeneOntology {
+    margin-right:30px;
+}
+
+.result_id_infor {
+    display: block;
+}
