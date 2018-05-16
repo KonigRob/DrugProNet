@@ -11,7 +11,7 @@
 	      integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
 	      crossorigin="anonymous">
 </head>
-<body style="background: black; width: 1000px">
+<body style="min-height: auto; background-image: url('images/footer.jpg'); background-repeat: repeat-y; background-color: black; width: 1000px; height: 100%; font-family: arial, verdannada, san-serif;">
 	<div>
 		<div id="header">
 			<a href="DrugProNet.php" target="_blank">
@@ -31,37 +31,59 @@
 		<a id="8" href="http://www.kinexus.ca/kinetica" target="_blank"><img id="kinetica" width="163" height="40" style="float: left" src="images/navBar_08.png"></a>
 	</div>
 	<!--Query bar-->
-	<div style="height: 40px; width: 1000px; border-bottom: lightskyblue solid 1px;">
+	<div style="height: 40px; width: 1000px; border-bottom: lightskyblue solid 1px; background: black">
+		<!--Select & dropdown-->
 		<div style="width: 580px; height: 40px; float: left;">
+			<!--select-->
 			<div style="float:left;width:300px;color:#738569; text-align: center; padding-top: 10px;font-weight: bold;
-    font-size: 14px; line-height: 14px">Select type of query desired</div>
+            font-size: 14px; line-height: 14px">
+				Select type of query desired
+			</div>
+			<!--dropdown-->
 			<div class="dropdown" style="float:left;padding: 3.6px 9px 3.6px 9px">
 
 				<button class="dropdown-toggle" style="width: 240px;
 				border-bottom-left-radius: 7px; border-bottom-right-radius: 7px;
 				border-top-left-radius: 7px; border-top-right-radius: 7px;
 				font-size: 12px; text-align: left; margin-top: 4px" type="button" id="dropdownMenuButton" data-toggle="dropdown">Click to view options</button>
-				<div class="dropdown-menu" style="border-bottom-left-radius: 7px; border-bottom-right-radius: 7px;
-				border-top-left-radius: 7px; border-top-right-radius: 7px; padding: 1px">
-					<a class="dropdown-item" style="padding-top: 1px; padding-bottom: 1px; padding-left: 1px; font-size: 14px" href="./ProteinDrugQuery.html">Protein-focused Drug Interaction</a>
+				<div class="dropdown-menu" style="border-radius: 7px; padding: 1px">
+					<a class="dropdown-item" style="padding-top: 1px; padding-bottom: 1px; padding-left: 1px; font-size: 14px" href="ProteinDrugQuery.html">Protein-focused Drug Interaction</a>
 					<a class="dropdown-item" style="padding-top: 1px; padding-bottom: 1px; padding-left: 1px; font-size: 14px" href="./DrugProteinQuery.html">Drug-focused Protein Interaction</a>
 					<a class="dropdown-item" style="padding-top: 1px; padding-bottom: 1px; padding-left: 1px; font-size: 14px" href="./ProteinInfo.html">Protein Information</a>
+					<a class="dropdown-item" style="padding-top: 1px; padding-bottom: 1px; padding-left: 1px; font-size: 14px" href="./DrugInfo.html">Drug Information</a>
 				</div>
 
 			</div>
 
 		</div>
+		<!--links-->
 		<div style="float: left; width: 420px; height: 33px; padding-left: 22px; padding-top: 12px;
 		 font-size: 13px;">
-			<span style="border-right-color: #FC0; border-right-style: solid; border-right-width:2px; color: #8F72C5; font-weight: bold">Updated: 2018 May </span>
-			<a href="http://www.genexus.ca" style="border-right-color: #FC0; border-right-style: solid; border-right-width:2px; color: #FC0; padding-left: 5px; padding-right: 5px;">Home</a>
-			<a href="http://www.kinexus.ca" style="border-right-color: #FC0; border-right-style: solid; border-right-width:2px; color: #FC0; padding-left: 5px; padding-right: 5px;" target="_blank">Kinuxus</a>
-			<a href="http://www.kinexus.ca/contact/contact.htm" style="border-right-color: #FC0; border-right-style: solid; border-right-width:2px; color: #FC0; padding-left: 5px; padding-right: 5px;">Contact</a>
-			<a href="http://www.drugpronet.ca/credits.html" style="border-right-color: #FC0; border-right-style: solid; border-right-width:2px; color: #FC0; padding-left: 5px; padding-right: 5px;">Credits</a>
+			<span style="border-right: #FC0 solid 2px; color: #8F72C5; padding-right: 5px; font-weight: bold">Updated: 2018 May </span>
+			<a href="http://www.genexus.ca" style="border-right: #FC0 solid 2px; color: #FC0; padding-left: 5px; padding-right: 5px;">Home</a>
+			<a href="http://www.kinexus.ca" style="border-right: #FC0 solid 2px; color: #FC0; padding-left: 5px; padding-right: 5px;" target="_blank">Kinuxus</a>
+			<a href="http://www.kinexus.ca/contact/contact.htm" style="border-right: #FC0 solid 2px; color: #FC0; padding-left: 5px; padding-right: 5px;">Contact</a>
+			<a href="http://www.drugpronet.ca/credits.html" style="border-right: #FC0 solid 2px; color: #FC0; padding-left: 5px; padding-right: 5px;">Credits</a>
 		</div>
 	</div>
 	<!--Information for the site-->
-	<div>
+	<div style="clear: both">
+		<!--General Info-->
+		<div style="margin-top: 12px; width: 174px; text-align: right; float: left; color: #708591;
+        font-weight: bold; margin-bottom: 20px; padding: 10px 8px;">
+			<p>General Info</p>
+		</div>
+		<!--Protein Description-->
+		<div style="padding: 10px 20px; width: 450px; float: left; margin-bottom: 20px; margin-top: 12px;">
+			<p style="color: #FC0; margin-bottom: 8px; font-weight: bold;">Protein Description</p>
+			<p style="color: #738569; font-size: 15px; margin-bottom: 10px;">This report provides detailed information on one of over 485
+				proteins that have been experimentally identified as targets for
+				inhibitory drugs and co-crystallized with these compounds. The
+				data has been annotated from multiple sources, including the US
+				National Center for Biotechnology Information, UniProt, and
+				Phosphosite Plus, and url links are provided to these and other
+				SigNET KnowledgeBases.</p>
+		</div>
 
 	</div>
 	<!--script to deal with navbar hover over-->
