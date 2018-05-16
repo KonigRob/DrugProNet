@@ -11,80 +11,169 @@
 	      integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
 	      crossorigin="anonymous">
 </head>
-<body style="min-height: auto; background-image: url('images/footer.jpg'); background-repeat: repeat-y; background-color: black; width: 1000px; height: 100%; font-family: arial, verdannada, san-serif;">
+<body style="background-image: url('images/footer.jpg'); background-repeat: repeat-y; background-color: black; width: 1000px; height: 100%; font-family: arial, verdannada, san-serif;">
 	<div>
-		<div id="header">
-			<a href="DrugProNet.php" target="_blank">
-				<img class="img-fluid" src="images/DrugProNETBanner.jpg">
-			</a>
-		</div>
-	</div>
-	<!--Navbar with links-->
-	<div style="height: 40px; width: 1000px;">
-		<a id="1" href="http://kinatlas.ca:8080" target="_blank"><img id="kinatlas" width="128" height="40" style="float: left" src="images/navBar_01.png"></a>
-		<a id="2" href="http://www.transcriptonet.ca" target="_blank"><img id="transcriptonet" width="141" height="40" style="float: left" src="images/navBar_02.png"></a>
-		<a id="3" href="http://www.phosphonet.ca" target="_blank"><img id="phosphonet" width="127" height="40" style="float: left" src="images/navBar_03.png"></a>
-		<a id="4" href="http://www.onconet.ca" target="_blank"><img id="onconet" width="107" height="40" style="float: left" src="images/navBar_04.png"></a>
-		<a id="5" href="http://www.kinasenet.ca" target="_blank"><img id="kinasenet" width="111" height="40" style="float: left" src="images/navBar_05.png"></a>
-		<a id="6" href="http://www.drugkinet.ca" target="_blank"><img id="drugkinet" width="118" height="40" style="float: left" src="images/navBar_06.png"></a>
-		<a id="7" href="http://www.kinet-am.ca" target="_blank"><img id="kinetam" width="105" height="40" style="float: left" src="images/navBar_07.png"></a>
-		<a id="8" href="http://www.kinexus.ca/kinetica" target="_blank"><img id="kinetica" width="163" height="40" style="float: left" src="images/navBar_08.png"></a>
-	</div>
-	<!--Query bar-->
-	<div style="height: 40px; width: 1000px; border-bottom: lightskyblue solid 1px; background: black">
-		<!--Select & dropdown-->
-		<div style="width: 580px; height: 40px; float: left;">
-			<!--select-->
-			<div style="float:left;width:300px;color:#738569; text-align: center; padding-top: 10px;font-weight: bold;
-            font-size: 14px; line-height: 14px">
-				Select type of query desired
+		<div>
+			<div id="header">
+				<a href="DrugProNet.php" target="_blank">
+					<img class="img-fluid" src="images/DrugProNETBanner.jpg">
+				</a>
 			</div>
-			<!--dropdown-->
-			<div class="dropdown" style="float:left;padding: 3.6px 9px 3.6px 9px">
+		</div>
+		<!--Navbar with links-->
+		<div style="height: 40px; width: 1000px;">
+			<a id="1" href="http://kinatlas.ca:8080" target="_blank"><img id="kinatlas" width="128" height="40" style="float: left" src="images/navBar_01.png"></a>
+			<a id="2" href="http://www.transcriptonet.ca" target="_blank"><img id="transcriptonet" width="141" height="40" style="float: left" src="images/navBar_02.png"></a>
+			<a id="3" href="http://www.phosphonet.ca" target="_blank"><img id="phosphonet" width="127" height="40" style="float: left" src="images/navBar_03.png"></a>
+			<a id="4" href="http://www.onconet.ca" target="_blank"><img id="onconet" width="107" height="40" style="float: left" src="images/navBar_04.png"></a>
+			<a id="5" href="http://www.kinasenet.ca" target="_blank"><img id="kinasenet" width="111" height="40" style="float: left" src="images/navBar_05.png"></a>
+			<a id="6" href="http://www.drugkinet.ca" target="_blank"><img id="drugkinet" width="118" height="40" style="float: left" src="images/navBar_06.png"></a>
+			<a id="7" href="http://www.kinet-am.ca" target="_blank"><img id="kinetam" width="105" height="40" style="float: left" src="images/navBar_07.png"></a>
+			<a id="8" href="http://www.kinexus.ca/kinetica" target="_blank"><img id="kinetica" width="163" height="40" style="float: left" src="images/navBar_08.png"></a>
+		</div>
+		<!--Query bar-->
+		<div style="height: 40px; width: 1000px; border-bottom: lightskyblue solid 1px; background: black">
+			<!--Select & dropdown-->
+			<div style="width: 580px; height: 40px; float: left;">
+				<!--select-->
+				<div style="float:left;width:300px;color:#738569; text-align: center; padding-top: 10px;font-weight: bold;
+	            font-size: 14px; line-height: 14px">
+					Select type of query desired
+				</div>
+				<!--dropdown-->
+				<div class="dropdown" style="float:left;padding: 3.6px 9px 3.6px 9px">
 
-				<button class="dropdown-toggle" style="width: 240px;
-				border-bottom-left-radius: 7px; border-bottom-right-radius: 7px;
-				border-top-left-radius: 7px; border-top-right-radius: 7px;
-				font-size: 12px; text-align: left; margin-top: 4px" type="button" id="dropdownMenuButton" data-toggle="dropdown">Click to view options</button>
-				<div class="dropdown-menu" style="border-radius: 7px; padding: 1px">
-					<a class="dropdown-item" style="padding-top: 1px; padding-bottom: 1px; padding-left: 1px; font-size: 14px" href="ProteinDrugQuery.html">Protein-focused Drug Interaction</a>
-					<a class="dropdown-item" style="padding-top: 1px; padding-bottom: 1px; padding-left: 1px; font-size: 14px" href="./DrugProteinQuery.html">Drug-focused Protein Interaction</a>
-					<a class="dropdown-item" style="padding-top: 1px; padding-bottom: 1px; padding-left: 1px; font-size: 14px" href="./ProteinInfo.html">Protein Information</a>
-					<a class="dropdown-item" style="padding-top: 1px; padding-bottom: 1px; padding-left: 1px; font-size: 14px" href="./DrugInfo.html">Drug Information</a>
+					<button class="dropdown-toggle" style="width: 240px;
+					border-bottom-left-radius: 7px; border-bottom-right-radius: 7px;
+					border-top-left-radius: 7px; border-top-right-radius: 7px;
+					font-size: 12px; text-align: left; margin-top: 4px" type="button" id="dropdownMenuButton" data-toggle="dropdown">Click to view options</button>
+					<div class="dropdown-menu" style="border-radius: 7px; padding: 1px">
+						<a class="dropdown-item" style="padding-top: 1px; padding-bottom: 1px; padding-left: 1px; font-size: 14px" href="ProteinDrugQuery.html">Protein-focused Drug Interaction</a>
+						<a class="dropdown-item" style="padding-top: 1px; padding-bottom: 1px; padding-left: 1px; font-size: 14px" href="./DrugProteinQuery.html">Drug-focused Protein Interaction</a>
+						<a class="dropdown-item" style="padding-top: 1px; padding-bottom: 1px; padding-left: 1px; font-size: 14px" href="./ProteinInfo.html">Protein Information</a>
+						<a class="dropdown-item" style="padding-top: 1px; padding-bottom: 1px; padding-left: 1px; font-size: 14px" href="./DrugInfo.html">Drug Information</a>
+					</div>
+
 				</div>
 
 			</div>
-
+			<!--links-->
+			<div style="float: left; width: 420px; height: 33px; padding-left: 22px; padding-top: 12px;
+			 font-size: 13px;">
+				<span style="border-right: #FC0 solid 2px; color: #8F72C5; padding-right: 5px; font-weight: bold">Updated: 2018 May </span>
+				<a href="http://www.genexus.ca" style="border-right: #FC0 solid 2px; color: #FC0; padding-left: 5px; padding-right: 5px;">Home</a>
+				<a href="http://www.kinexus.ca" style="border-right: #FC0 solid 2px; color: #FC0; padding-left: 5px; padding-right: 5px;" target="_blank">Kinuxus</a>
+				<a href="http://www.kinexus.ca/contact/contact.htm" style="border-right: #FC0 solid 2px; color: #FC0; padding-left: 5px; padding-right: 5px;">Contact</a>
+				<a href="http://www.drugpronet.ca/credits.html" style="border-right: #FC0 solid 2px; color: #FC0; padding-left: 5px; padding-right: 5px;">Credits</a>
+			</div>
 		</div>
-		<!--links-->
-		<div style="float: left; width: 420px; height: 33px; padding-left: 22px; padding-top: 12px;
-		 font-size: 13px;">
-			<span style="border-right: #FC0 solid 2px; color: #8F72C5; padding-right: 5px; font-weight: bold">Updated: 2018 May </span>
-			<a href="http://www.genexus.ca" style="border-right: #FC0 solid 2px; color: #FC0; padding-left: 5px; padding-right: 5px;">Home</a>
-			<a href="http://www.kinexus.ca" style="border-right: #FC0 solid 2px; color: #FC0; padding-left: 5px; padding-right: 5px;" target="_blank">Kinuxus</a>
-			<a href="http://www.kinexus.ca/contact/contact.htm" style="border-right: #FC0 solid 2px; color: #FC0; padding-left: 5px; padding-right: 5px;">Contact</a>
-			<a href="http://www.drugpronet.ca/credits.html" style="border-right: #FC0 solid 2px; color: #FC0; padding-left: 5px; padding-right: 5px;">Credits</a>
+		<!--Information for the site-->
+		<div style="clear: both; box-sizing: content-box">
+			<div style="padding-top: 20px; box-sizing: inherit">
+				<!--label 1-->
+				<div style="clear: both; width: 174px; text-align: right; float: left; color: #708591; margin-bottom: 20px;
+	                padding: 10px 8px; font-size: 14px; box-sizing: inherit">
+					<p style="color: #738569; font-size: 15px; margin-bottom: 10px;line-height: 150%;">
+						&nbsp;
+					</p>
+				</div>
+				<!--home info 1-->
+				<div style="box-sizing: inherit; padding: 10px 20px; width: 760px; float: left; margin-bottom: 20px;">
+					<p style="color: #FC0; margin-bottom: 8px; font-weight: bold;">
+						About DrugProNET ...
+					</p>
+					<p style="color: #c0c0c0">
+						DrugProNET is an open-access, knowledgebase developed by Kinexus Bioinformatics Corporation to foster the identification of
+						the most critical atomic interactions between drugs and their protein targets based on 3D x-ray crystallographic analyses.
+						Defining the key amino acid residues for drug binding in proteins permits the prediction of specific mutations in human genomes
+						that will affect the sensitivities of individuals to these compounds. The bond distances in Angstroms between the closest protein
+						and drug atoms in each crystal complex are provided in downloadable tables, along with definition of the closest amino acid
+						residue side-chains. DrugProNET features comprehensive information on over 2000 compounds that have been co-crystallized
+						with over 480 different human proteins in over 4400 protein-compound structures retrieved from the Research Collaboratory for
+						Structural Bioinformatics (RCSB) Protein Databank (PDB). In addition, information is also available for an additional 748
+						compounds that are inhibitors of protein kinases. The protein and drug data were retrieved from several sources, including the
+						RCSB PDB, Wikipedia, the Universal Protein Resource (UniProt), the National Center for Biotechnology Information’s (NCBI)
+						RefSeq and PubChem websites, and the European Molecular Biology Laboratory (EMBL) European Bioinformatics Institute’s
+						Kinase SARFari and ChEMBL websites.
+					</p>
+				</div>
+				<!--label 2-->
+				<div style="clear: both; width: 174px; text-align: right; float: left; color: #708591; margin-bottom: 20px;
+	                padding: 10px 8px; font-size: 14px; box-sizing: inherit">
+					<p style="color: #738569; font-size: 15px; margin-bottom: 10px;line-height: 150%;">
+						&nbsp;
+					</p>
+				</div>
+				<!--home info 2-->
+				<div style="box-sizing: inherit; padding: 10px 20px; width: 760px; float: left; margin-bottom: 20px;">
+					<p style="color: #FC0; margin-bottom: 8px; font-weight: bold;">
+						Instructions ...
+					</p>
+					<p style="color: #c0c0c0">
+						DrugProNET is designed to be fast and simple to navigate. Just follow the steps outlined in each query. Presently, there are
+						four different types of queries that you can perform with DrugProNET. You can search for target proteins if you know their
+						UniProt ID, RefSeq ID, or one of their common gene or protein names. You can also query for approved drugs and other
+						compound of interest if you know their CAS ID, PubChem CID, ChEMBL ID or one of their common or chemical names. A list of
+						possible options for proteins or compounds are generated by typing at least two letters of their names or identification numbers,
+						and waiting for a few moments for a complete list to appear.
+					</p>
+				</div>
+				<!--label 3-->
+				<div style="clear: both; width: 174px; text-align: right; float: left; color: #708591; margin-bottom: 20px;
+	                padding: 10px 8px; font-size: 14px; box-sizing: inherit">
+					<p style="color: #738569; font-size: 15px; margin-bottom: 10px;line-height: 150%;">
+						&nbsp;
+					</p>
+				</div>
+				<!--home info 3-->
+				<div style="box-sizing: inherit; padding: 10px 20px; width: 760px; float: left; margin-bottom: 20px;">
+					<p style="color: #FC0; margin-bottom: 8px; font-weight: bold;">
+						Other Useful Onlnie Resources From Kinexus ...
+					</p>
+					<p style="color: #c0c0c0">
+						DrugProNET is one of several useful open-access, online resources that are available from Kinexus to foster cell signalling
+						research by academic and industrial scientists. Direct links to several of our other knowledgebases in the SigNET KnowledgeBank
+						are provided just below the header at the top of each webpage in DrugProNET. Our related DrugKiNET knowledgebase
+						features comprehensive information on over 800 compounds that have been experimentally determined to inhibit human
+						protein kinases. This includes the retrieval of the lowest reported compound IC50, Ki and Kd values from several reputable
+						sources for over 105,000 experimentally tested, non-redundant kinase-compound pairs. Using this information for training, we
+						developed two kinase inhibitor prediction algorithms to further predict another 200,000 possible kinase-compound interactions.
+						TranscriptoNET provides gene expression information on over 20,300 human genes in over 600 diverse human cell lines,
+						organs and tissues. PhosphoNET features data on nearly 1 million confirmed or predicted human phosphorylation sites in the
+						proteins encoded by these genes. KinATLAS reveals interactions between these proteins with each other in signalling systems
+						as well as interactions with kinase inhibitory compounds. KinaseNET offers detailed information about 536 human protein
+						kinases, whereas OncoNET provides expression and mutation information for 3000 cancer-related proteins in diverse human
+						tissues and cell lines. For semi-quantitative data on actual protein expression in over 2,000 diverse biological specimens,
+						please also visit our open-access KiNET DataBank with over 2000 antibody microarray analyses with over 1700 diverse panand
+						phosphosite-specific antibodies. Most of these antibodies are available from Kinexus for screening lysates from cells and
+						tissues using our Kinex™ KAM antibody microarrays or as stand-alone products at our www.kinexusproducts.ca website.
+					</p>
+				</div>
+				<!--label for footer-->
+				<div style="clear: both; width: 174px; text-align: right; float: left; color: #708591; margin-bottom: 20px;
+	                padding: 10px 8px; font-size: 14px; box-sizing: inherit">
+					<p style="color: #738569; font-size: 15px; margin-bottom: 10px;line-height: 150%;">
+						&nbsp;
+					</p>
+				</div>
+				<!--footer-->
+				<div style="box-sizing: inherit; padding: 10px 20px; width: 770px; float: left;  text-align: center">
+					<p style="color: #738569;; margin-bottom: 8px; font-weight: bold;">
+						Copyright © 2018 Kinexus Bioinformatics Corporation.  All rights reserved.
+					</p>
+				</div>
+			</div>
+			<!--<div style="height: 30px; width: 1000px; position: fixed; bottom: 0; background-color: green;">-->
+			<!--</div>-->
 		</div>
 	</div>
-	<!--Information for the site-->
-	<div style="clear: both">
-		<!--General Info-->
-		<div style="margin-top: 12px; width: 174px; text-align: right; float: left; color: #708591;
-        font-weight: bold; margin-bottom: 20px; padding: 10px 8px;">
-			<p>General Info</p>
+	<!--floating home and top-->
+	<div style="height: 30px; width: 190px; position: fixed; bottom: 0; background-image: url('images/footer.jpg'); background-repeat: repeat-y;;">
+		<div style="width: 40px; float: left">&nbsp</div>
+		<div style="width: 150px; float: left; text-align: center;">
+			<a href="index.html" style="border-right: #FC0 solid 2px; color: #FC0; padding-left: 5px; padding-right: 5px; font-weight: bold;">Home</a>
+			<a href="#" style="color: #FC0; padding-left: 5px; padding-right: 5px; font-weight: bold;">Top</a>
 		</div>
-		<!--Protein Description-->
-		<div style="padding: 10px 20px; width: 450px; float: left; margin-bottom: 20px; margin-top: 12px;">
-			<p style="color: #FC0; margin-bottom: 8px; font-weight: bold;">Protein Description</p>
-			<p style="color: #738569; font-size: 15px; margin-bottom: 10px;">This report provides detailed information on one of over 485
-				proteins that have been experimentally identified as targets for
-				inhibitory drugs and co-crystallized with these compounds. The
-				data has been annotated from multiple sources, including the US
-				National Center for Biotechnology Information, UniProt, and
-				Phosphosite Plus, and url links are provided to these and other
-				SigNET KnowledgeBases.</p>
-		</div>
-
 	</div>
 	<!--script to deal with navbar hover over-->
 	<script>
