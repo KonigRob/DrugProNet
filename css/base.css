@@ -13,13 +13,10 @@ html, body {
 td {
     height: 40px;
 }
-.colorChange {
-    color: #738569;
-}
+
 .float-clear {
     clear: both;
 }
-
 
 /*==============================Header section===============================*/
 .navBar {
@@ -65,6 +62,50 @@ td {
     margin-top: 4px;
 }
 
+/*==============================Footer section===============================*/
+.footer {
+    clear: both;
+    height: 30px;
+    width: 1000px;
+    background-image: url('../images/footer.jpg');
+}
+
+#bottomSpacer {
+    width: 40px;
+    float: left;
+}
+
+#bottomNavContainer {
+    width: 150px;
+    float: left;
+}
+
+#bottomNavBar li {
+    float: left;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-weight: bold;
+    list-style-type: none;
+}
+
+#bNav1 {
+    border-right: solid orange 2px;
+}
+
+#bottomNavBar a {
+    display: block;
+    color: #FC0;
+    font-size: 14px;
+}
+
+#CPinfo {
+    width: 810px;
+    float: left;
+    text-align: center;
+    color: #738569;
+    font-weight: bold;
+    font-size: 13px;
+}
 
 /*==============================Result Page=====================================*/
 .content {
@@ -103,20 +144,21 @@ td {
     float: right;
 }
 /****Page left, each heading****/
-.labelDivThick, .subLabels, .columnName {
+.labelDivThick,.columnName {
+    color: #FC0;
     clear: both;
     width: 174px;
     text-align: right;
     float: left;
-    color: #708591;
     font-weight: bold;
     margin: 0;
-    padding: 10px 0;
+    padding: 2px 0;
 }
 
-.subLabels,.columnName {
+.columnName {
     height: 26px;
     font-weight: normal;
+    color: #708591;
 }
 .infoDiv {
     padding: 10px 20px;
@@ -138,32 +180,19 @@ td {
     margin-bottom: 10px;
 }
 
-.result_info {
-    padding: 0px 20px;
-    width: 800px;
-    float: left;
-    margin-left: 10px;
-    margin-bottom: 20px;
-    margin-top: 12px;
-}
 /****Results from the Database****/
-.resultText, .resultLabel {
+.resultLabel {
     color: #c5c5c4;
     font-size: 15px;
     margin-top: 2px;
     margin-bottom: 14px;
-    margin-left: 50px;
+    margin-left: 30px;
+    width: 600px;
     height: 26px;
-}
-
-.expand_row p { /*For the result wiht long description*/
-    height: 36px;
+    display: inline-block;
 }
 
 .result_GeneOntology {
     margin-right:30px;
 }
 
-.result_id_infor {
-    display: block;
-}
