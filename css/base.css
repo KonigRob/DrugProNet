@@ -28,6 +28,7 @@ td {
     height: 40px;
     width: 1000px;
     border-bottom: lightskyblue solid 1px;
+    background-color: black;
 }
 
 .queryBarDropDownContainer {
@@ -107,7 +108,7 @@ td {
     font-size: 13px;
 }
 
-/*==============================Result Page=====================================*/
+/*==============================Result Page(General)=====================================*/
 .content {
     clear: both;
 }
@@ -136,13 +137,16 @@ td {
     margin-bottom: 20px;
     padding: 10px 8px;
 }
+
 /****Rotate ad****/
 .ad_temp {
     width: 300px;
     margin-top: 20px;
     margin-bottom: 20px;
     float: right;
+    display: block;
 }
+
 /****Page left, each heading****/
 .labelDivThick,.columnName {
     color: #FC0;
@@ -192,7 +196,38 @@ td {
     display: inline-block;
 }
 
+.input {
+    border-radius: 4px;
+    height: 26px;
+}
+
+.button {
+    border-radius: 4px;
+    float: left;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+/*==============================Protein infor Result Page=====================================*/
 .result_GeneOntology {
     margin-right:30px;
 }
 
+/*==============================Drug infor Result Page=====================================*/
+.query_info, .filter_info {
+    padding: 10px 20px;
+    width: 800px;
+    float: left;
+    margin-left: 10px;
+    margin-bottom: 20px;
+    margin-top: 12px;
+}
+
+.filter_info {
+    margin-bottom: 0px;
+}
+#drugInforDropDown {
+    width: 30%;
+    margin-top: 30px;
+    display: none;
+
+}

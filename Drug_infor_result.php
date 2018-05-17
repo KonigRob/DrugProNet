@@ -79,15 +79,10 @@
 
         <!--Protein Description-->
         <div class="page_info">
-            <p class="parHead">Protein Description</p>
+            <p class="parHead">Compound Information</p>
             <p class="parText">
-                This report provides detailed information on one of over 485
-                proteins that have been experimentally identified as targets for
-                inhibitory drugs and co-crystallized with these compounds. The
-                data has been annotated from multiple sources, including the US
-                National Center for Biotechnology Information, UniProt, and
-                Phosphosite Plus, and url links are provided to these and other
-                SigNET KnowledgeBases.
+                This report provides detailed information on one selected compound from over 800 compounds that have been
+                experimentally identified as protein kinase inhibitors.
             </p>
         </div>
 
@@ -96,162 +91,118 @@
             <a href= "#" target="_blank"><img id="ads" src="images/10MY25WebsiteBannerAds-1v0.1.jpg" alt="Need to rapidly characterize a new protein or phospho-site for regulation? Try our Standard Reverse Lysate Microarray Services" /></a>
         </div>
 
-        <!-------------NomenClature--------------->
-        <div class="labelDivThick">
-            <p>NomenClature</p>
-        </div>
+        <!-------------All datas--------------->
         <table class="float-clear">
             <tr >
-                <td class="columnName">Protein ShortName:</td>
+                <td class="columnName">Compound Name</td>
                 <td>
                     <span class="resultLabel">ABL1</span></td>
             </tr>
             <tr>
-                <td class="columnName">Protein FullName:</td>
+                <td class="columnName">Compound Ailias</td>
                 <td>
-                    <span class="resultLabel">Abelson murine leukemia viral oncogene homologue 1 </span></td>
+                    <span class="resultLabel">Abelson murine leukemia viral oncogene homologue 1.Abelson murine leukemia viral oncogene homologue 1
+                    Abelson murine leukemia viral oncogene homologue 1 Abelson murine leukemia viral oncogene homologue 1 </span></td>
             </tr>
             <tr>
-                <td class="columnName">Alias:</td>
-                <td>
-                    <span class="resultLabel">Discoidin domain receptor 2; Discoidin domain receptor tyrosine kinase 2; EC 2.7.1.112; EC 2.7.10.1; Neurotrophic tyrosine kinase, receptor-related 3; NTRKR3; Receptor protein-tyrosine kinase TKT; TKT; TYRO10; Tyrosine-protein kinase TYRO 10</span></td>
-            </tr>
-            <tr>
-                <td class="columnName">UniProt ID:</td>
-                <td>
-                    <span class="resultLabel">Q16832</span></td>
-            </tr>
-            <tr>
-                <td class="columnName">NCBI ID:</td>
-                <td>
-                    <span class="resultLabel">CAA52777.1</span></td>
-            </tr>
-            <tr>
-                <td class="columnName">Kinase Type:</td>
-                <td>
-                    <span class="resultLabel">Protein-tyrosine kinase</span></td>
-            </tr>
-            <tr>
-                <td class="columnName">Kinase Group:</td>
-                <td>
-                    <span class="resultLabel">TK</span></td>
-            </tr>
-            <tr>
-                <td class="columnName">Kinase Family:</td>
-                <td >
-                    <span class="resultLabel">DDR</span></td>
-            </tr>
-            <tr>
-                <td class="columnName">Kinase Subfamily:</td>
+                <td class="columnName">Drug Formula</td>
                 <td>
                     <span class="resultLabel"></span></td>
             </tr>
             <tr>
-                <td class="columnName">Number AA:</td>
-                <td>
-                    <span class="resultLabel">855</span></td>
-            </tr>
-            <tr>
-                <td class="columnName">Molecular Mass (Da):</td>
-                <td>
-                    <span class="resultLabel">96736</span></td>
-            </tr>
-        </table>
-        <!-----------NomenClature End------------->
-
-        <!-------------Gene Ontology Terms--------------->
-        <div class="labelDivThick">
-            <p>Gene Ontology<br>Terms
-            </p>
-        </div>
-
-        <table class="float-clear">
-            <tr >
-                <td class="columnName">Cell Compornent:</td>
-                <td>
-                    <span class="resultLabel">
-                        <span class="result_GeneOntology">GO:0005887</span>
-					    <span class="result_GeneOntology">GO:0005829</span>
-					    <span class="result_GeneOntology">GO:0005730</span>
-                    </span>
-                </td>
-            </tr>
-            <tr>
-                <td class="columnName">Molecure function:</td>
-                <td>
-                    <span class="resultLabel">
-                        <span class="result_GeneOntology">GO:0005887</span>
-					    <span class="result_GeneOntology">GO:0005829</span>
-					    <span class="result_GeneOntology">GO:0005730</span>
-                    </span>
-                </td>
-            </tr>
-            <tr>
-                <td class="columnName">Biological process:</td>
-                <td>
-                    <span class="resultLabel">
-                        <span class="result_GeneOntology">GO:0005887</span>
-					    <span class="result_GeneOntology">GO:0005829</span>
-					    <span class="result_GeneOntology">GO:0005730</span>
-                    </span>
-                </td>
-            </tr>
-        </table>
-        <!-------------Gene Ontology Terms Ends--------------->
-
-        <!-------------Specific Infor--------------->
-        <div class="labelDivThick">
-            <p>Specific Infor</p>
-        </div>
-
-        <table class="float-clear">
-            <tr >
-                <td class="columnName">Mass(Da):</td>
-                <td>
-                    <span class="resultLabel">Number AA:</span></td>
-            </tr>
-            <tr>
-                <td class="columnName">UniProt ID:</td>
-                <td>
-                    <span class="resultLabel">Abelson murine leukemia viral oncogene homologue 1 </span></td>
-            </tr>
-            <tr>
-                <td class="columnName">NCBI RefSeq ID:</td>
-                <td>
-                    <span class="resultLabel">Discoidin domain receptor 2; Discoidin domain receptor tyrosine kinase 2; EC 2.7.1.112; EC 2.7.10.1; Neurotrophic tyrosine kinase, receptor-related 3; NTRKR3; Receptor protein-tyrosine kinase TKT; TKT; TYRO10; Tyrosine-protein kinase TYRO 10</span></td>
-            </tr>
-            <tr>
-                <td class="columnName">Int. Protein ID:</td>
+                <td class="columnName">Molecular Mass</td>
                 <td>
                     <span class="resultLabel">Q16832</span></td>
             </tr>
             <tr>
-                <td class="columnName">PhosphoNET ID:</td>
+                <td class="columnName">Compound CAS ID</td>
                 <td>
-                    <span class="resultLabel">CAA52777.1</span></td>
+                    <span class="resultLabel"></span></td>
             </tr>
             <tr>
-                <td class="columnName">PhosphoSItePlus:</td>
+                <td class="columnName">PubChem CID</td>
                 <td>
-                    <span class="resultLabel">CAA52777.1</span></td>
+                    <span class="resultLabel">Protein-tyrosine kinase</span></td>
             </tr>
             <tr>
-                <td class="columnName">KinaseNET ID:</td>
+                <td class="columnName">ChEMBL ID</td>
                 <td>
-                    <span class="resultLabel">CAA52777.1</span></td>
+                    <span class="resultLabel">TK</span></td>
             </tr>
             <tr>
-                <td class="columnName">OncoNET ID:</td>
-                <td>
-                    <span class="resultLabel">CAA52777.1</span></td>
+                <td class="columnName">Kinase SARfari</td>
+                <td >
+                    <span class="resultLabel">DDR</span></td>
             </tr>
             <tr>
-                <td class="columnName">PDB Entries:</td>
+                <td class="columnName">PubChem SID</td>
                 <td>
-                    <span class="resultLabel">CAA52777.1</span></td>
+                    <span class="resultLabel"></span></td>
+            </tr>
+            <tr>
+                <td class="columnName">ChemSpider ID</td>
+                <td>
+                    <span class="resultLabel">855</span></td>
+            </tr>
+            <tr>
+                <td class="columnName">ChEBI  ID</td>
+                <td>
+                    <span class="resultLabel">96736</span></td>
             </tr>
         </table>
-        <!-----------Specific Infor End------------->
+        <!-----------Compound result End------------->
+
+        <!-------------Revise Query--------------->
+        <div class="page_info_label">
+            <p>Revise Query</p>
+        </div>
+
+        <div class="query_info">
+            <p class="parHead">Compound Information</p>
+            <p class="parText">
+                This query provides detailed information on over 800 compounds that have been experimentally identified as inhibitors
+                of one or more human protein kinases. Follow the instructions below to select a compound of interest.
+            </p>
+        </div>
+
+        <!--Filters-->
+        <div class="page_info_label">
+            <p>Filters</p>
+        </div>
+
+        <form action="#" method="post">
+            <div class="filter_info">
+                <p class="parHead">Step1 - Compound Specification</p>
+                <p class="parText">
+                    Enter the first few characters for a compound name, CAS ID, PubChem ID or ChEMBL ID and then
+                    select the desired search term from the Drop Down List.
+                </p>
+                <input type="text" class="input">
+
+                <select id="drugInforDropDown">
+                   <?php
+                    //The number of options depends on the input from user.
+                    for($i = 0; $i < 3; $i++) {
+                        echo "<option value=\"\">Placeholder</option>";
+                    }
+                   ?>
+                </select>
+            </div>
+
+            <div class="page_info_label"><!--To hold the space.---></div>
+
+            <div class="filter_info">
+                <p class="parHead">Step2 - Compound Specification</p>
+                <p class="parText">
+                   Click on the buttons below to retrieve information on the compound of interest or to reset the
+                    parameters for a new query.
+                </p>
+                <input type="submit" value="Retrieve Information" class="button">
+                <input type="reset" value="Reset" class="button">
+            </div>
+        </form>
+        <!--Filters End--->
+
 
         <div class="footer">
             <!-- site footer containing links to top of page and home and copyright info -->
@@ -309,6 +260,7 @@
         setInterval(loadImg(), imgChangeSpeed);
         function loadImg(){
             $("#ads").attr("src", "images/10MY25WebsiteBannerAds-" + randomInt + "v0.1.jpg");
+            $("#url").attr("href", )
             if(randomInt < imgLength){
                 randomInt = parseInt(randomInt) + 1;
             }
