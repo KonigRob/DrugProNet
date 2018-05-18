@@ -109,10 +109,6 @@ html, body {
     clear: both;
 }
 
-.pageContent {
-    padding-top: 20px;
-}
-
 .page_info {
     padding: 10px 20px;
     width: 450px;
@@ -206,12 +202,16 @@ html, body {
     margin-right: 20px;
     margin-left: 20px;
 }
-/*==============================Protein infor Result Page=====================================*/
+/*==============================Protein query Result Page=====================================*/
+
+
+
+/*==============================Protein info Result Page=====================================*/
 .result_GeneOntology {
     margin-right:30px;
 }
 
-/*==============================Drug infor Result Page=====================================*/
+/*==============================Drug info Result Page=====================================*/
 .query_info, .filter_info {
     padding: 10px 20px;
     width: 800px;
@@ -249,3 +249,33 @@ html, body {
 
 }
 
+/*==============================Credits=====================================*/
+.credits_label {
+    margin-top: 12px;
+    clear: both;
+    width: 174px;
+    text-align: right;
+    float: left;
+    color: #FC0;
+    font-weight: bold;
+    margin-bottom: 20px;
+    padding: 10px 8px;
+}
+
+.credits_body_container {
+    height: 300px;
+}
+.credits_page_info {
+    padding: 10px 20px;
+    width: 80%;
+    float: left;
+    margin-left: 10px;
+    margin-bottom: 20px;
+    margin-top: 12px;
+}
+
+.credits_parText {
+    font-size: 15px;
+    margin-bottom: 10px;
+    color: darkseagreen;
+}
