@@ -91,63 +91,159 @@
             <a href= "#" target="_blank"><img id="ads" src="images/10MY25WebsiteBannerAds-1v0.1.jpg" alt="Need to rapidly characterize a new protein or phospho-site for regulation? Try our Standard Reverse Lysate Microarray Services" /></a>
         </div>
 
-        <!-------------All datas--------------->
-        <table class="float-clear">
+        <!--Compuound structure image-->
+        <div class="structure_img">
+            <p class="structure_img_label">Compound Structure</p>
+            <img src="images/database_images/AT13148.gif" alt="Compound structure image" />
+        </div>
+
+        <!-------------Drug information--------------->
+        <table>
             <tr >
-                <td class="columnName">Compound Name</td>
+                <td class="columnName">Compound Name:</td>
                 <td>
                     <span class="resultLabel">ABL1</span></td>
             </tr>
             <tr>
-                <td class="columnName">Compound Ailias</td>
+                <td class="columnName">Compound Ailias:</td>
                 <td>
                     <span class="resultLabel">Abelson murine leukemia viral oncogene homologue 1.Abelson murine leukemia viral oncogene homologue 1
                     Abelson murine leukemia viral oncogene homologue 1 Abelson murine leukemia viral oncogene homologue 1 </span></td>
             </tr>
             <tr>
-                <td class="columnName">Drug Formula</td>
+                <td class="columnName">Drug Formula:</td>
                 <td>
                     <span class="resultLabel"></span></td>
             </tr>
             <tr>
-                <td class="columnName">Molecular Mass</td>
+                <td class="columnName">Molecular Mass:</td>
                 <td>
                     <span class="resultLabel">Q16832</span></td>
             </tr>
             <tr>
-                <td class="columnName">Compound CAS ID</td>
+                <td class="columnName">Compound CAS ID:</td>
                 <td>
                     <span class="resultLabel"></span></td>
             </tr>
             <tr>
-                <td class="columnName">PubChem CID</td>
+                <td class="columnName">PubChem CID:</td>
                 <td>
                     <span class="resultLabel">Protein-tyrosine kinase</span></td>
             </tr>
             <tr>
-                <td class="columnName">ChEMBL ID</td>
+                <td class="columnName">ChEMBL ID:</td>
                 <td>
                     <span class="resultLabel">TK</span></td>
             </tr>
             <tr>
-                <td class="columnName">Kinase SARfari</td>
+                <td class="columnName">Kinase SARfari:</td>
                 <td >
                     <span class="resultLabel">DDR</span></td>
             </tr>
             <tr>
-                <td class="columnName">PubChem SID</td>
+                <td class="columnName">PubChem SID:</td>
                 <td>
                     <span class="resultLabel"></span></td>
             </tr>
             <tr>
-                <td class="columnName">ChemSpider ID</td>
+                <td class="columnName">ChemSpider ID:</td>
                 <td>
                     <span class="resultLabel">855</span></td>
             </tr>
             <tr>
-                <td class="columnName">ChEBI  ID</td>
+                <td class="columnName">ChEBI  ID:</td>
                 <td>
                     <span class="resultLabel">96736</span></td>
+            </tr>
+            <tr>
+                <td class="columnName">BindingDB ID:</td>
+                <td>
+                    <span class="resultLabel"></span></td>
+            </tr>
+            <tr>
+                <td class="columnName">DrugBank ID:</td>
+                <td>
+                    <span class="resultLabel"></span></td>
+            </tr>
+            <tr>
+                <td class="columnName">Drug Registration:</td>
+                <td>
+                    <span class="resultLabel"></span></td>
+            </tr>
+            <tr>
+                <td class="columnName">KEGG Drug ID:</td>
+                <td>
+                    <span class="resultLabel"></span></td>
+            </tr>
+            <tr>
+                <td class="columnName"><span class="columnName_small">Therapeutic Targets ID:</span></td>
+                <td>
+                    <span class="resultLabel"></span></td>
+            </tr>
+            <tr>
+                <td class="columnName">PharmGKB ID:</td>
+                <td>
+                    <span class="resultLabel"></span></td>
+            </tr>
+            <tr>
+                <td class="columnName">HET ID:</td>
+                <td>
+                    <span class="resultLabel"></span></td>
+            </tr>
+            <tr>
+                <td class="columnName">Drug Product ID:</td>
+                <td>
+                    <span class="resultLabel"></span></td>
+            </tr>
+            <tr>
+                <td class="columnName">RxList ID:</td>
+                <td>
+                    <span class="resultLabel"></span></td>
+            </tr>
+            <tr>
+                <td class="columnName">Drugs.com ID:</td>
+                <td>
+                    <span class="resultLabel"></span></td>
+            </tr>
+            <tr>
+                <td class="columnName">Wikipedia:</td>
+                <td>
+                    <span class="resultLabel"></span></td>
+            </tr>
+            <tr>
+                <td class="columnName">General Targets:</td>
+                <td>
+                    <span class="resultLabel"></span></td>
+            </tr>
+            <tr>
+                <td class="columnName">General Activity:</td>
+                <td>
+                    <span class="resultLabel"></span></td>
+            </tr>
+            <tr>
+                <td class="columnName">Commentary:</td>
+                <td>
+                    <span class="resultLabel"></span></td>
+            </tr>
+            <tr>
+                <td class="columnName">Clinically Approved:</td>
+                <td>
+                    <span class="resultLabel"></span></td>
+            </tr>
+            <tr>
+                <td class="columnName">Latest Stage Trials:</td>
+                <td>
+                    <span class="resultLabel"></span></td>
+            </tr>
+            <tr>
+                <td class="columnName">Producer:</td>
+                <td>
+                    <span class="resultLabel"></span></td>
+            </tr>
+            <tr>
+                <td class="columnName"><span class="columnName_small">Disease Applications:</span></td>
+                <td>
+                    <span class="resultLabel"></span></td>
             </tr>
         </table>
         <!-----------Compound result End------------->
@@ -202,7 +298,6 @@
             </div>
         </form>
         <!--Filters End--->
-
 
         <div class="footer">
             <!-- site footer containing links to top of page and home and copyright info -->
