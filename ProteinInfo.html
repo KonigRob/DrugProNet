@@ -5,146 +5,143 @@
 	<title>
 		DrugProNet
 	</title>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>\
-
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
 	      integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
 	      crossorigin="anonymous">
 </head>
-<body id="top" style="background-image: url('images/footer.jpg'); background-repeat: repeat-y; background-color: black; width: 1000px; height: 100%; font-family: arial, verdannada, san-serif;">
-<div>
+<body id="top" style="background: url('images/footer.jpg') repeat-y black; width: 1000px; height: 100%; font-family: arial, verdannada, san-serif;">
 	<div>
-		<div id="header">
-			<a href="DrugProNet.php" target="_blank">
-				<img class="img-fluid" src="images/DrugProNETBanner.jpg">
-			</a>
-		</div>
-	</div>
-	<!--Navbar with links-->
-	<div style="height: 40px; width: 1000px;">
-		<a id="1" href="http://kinatlas.ca:8080" target="_blank"><img id="kinatlas" width="128" height="40" style="float: left" src="images/navBar_01.png"></a>
-		<a id="2" href="http://www.transcriptonet.ca" target="_blank"><img id="transcriptonet" width="141" height="40" style="float: left" src="images/navBar_02.png"></a>
-		<a id="3" href="http://www.phosphonet.ca" target="_blank"><img id="phosphonet" width="127" height="40" style="float: left" src="images/navBar_03.png"></a>
-		<a id="4" href="http://www.onconet.ca" target="_blank"><img id="onconet" width="107" height="40" style="float: left" src="images/navBar_04.png"></a>
-		<a id="5" href="http://www.kinasenet.ca" target="_blank"><img id="kinasenet" width="111" height="40" style="float: left" src="images/navBar_05.png"></a>
-		<a id="6" href="http://www.drugkinet.ca" target="_blank"><img id="drugkinet" width="118" height="40" style="float: left" src="images/navBar_06.png"></a>
-		<a id="7" href="http://www.kinet-am.ca" target="_blank"><img id="kinetam" width="105" height="40" style="float: left" src="images/navBar_07.png"></a>
-		<a id="8" href="http://www.kinexus.ca/kinetica" target="_blank"><img id="kinetica" width="163" height="40" style="float: left" src="images/navBar_08.png"></a>
-	</div>
-	<!--Query bar-->
-	<div style="height: 40px; width: 1000px; border-bottom: lightskyblue solid 1px; background: black">
-		<!--Select & dropdown-->
-		<div style="width: 580px; height: 40px; float: left;">
-			<!--select-->
-			<div style="float:left;width:300px;color:#738569; text-align: center; padding-top: 10px;font-weight: bold;
-	            font-size: 14px; line-height: 14px">
-				Select type of query desired
+		<div>
+			<div id="header">
+				<a href="DrugProNet.php" target="_blank">
+					<img class="img-fluid" src="images/DrugProNETBanner.jpg">
+				</a>
 			</div>
-			<!--dropdown-->
-			<div class="dropdown" style="float:left;padding: 3.6px 9px 3.6px 9px">
-				<button class="dropdown-toggle" style="width: 240px;
-					border-radius: 7px; background-color: #c0c0c0;
-					font-size: 12px; text-align: left; margin-top: 4px" type="button" id="dropdownMenuButton" data-toggle="dropdown">Click to view options</button>
-				<div class="dropdown-menu" style="border-radius: 7px; padding: 1px; background-color: #c0c0c0">
-					<a class="dropdown-item" style="padding: 1px 0 1px 1px; font-size: 14px" href="http://www.drugpronet.ca/ProteinDrugQuery.html">Protein-focused Drug Interaction</a>
-					<a class="dropdown-item" style="padding: 1px 0 1px 1px; font-size: 14px" href="http://www.drugpronet.ca/DrugProteinQuery.html">Drug-focused Protein Interaction</a>
-					<a class="dropdown-item" style="padding: 1px 0 1px 1px; font-size: 14px" href="http://www.drugpronet.ca/ProteinInfo.html">Protein Information</a>
-					<a class="dropdown-item" style="padding: 1px 0 1px 1px; font-size: 14px" href="http://www.drugpronet.ca/DrugInfo.html">Drug Information</a>
+		</div>
+		<!--Navbar with links-->
+		<div style="height: 40px; width: 1000px;">
+			<a id="1" href="http://kinatlas.ca:8080" target="_blank"><img id="kinatlas" width="128" height="40" style="float: left" src="images/navBar_01.png"></a>
+			<a id="2" href="http://www.transcriptonet.ca" target="_blank"><img id="transcriptonet" width="141" height="40" style="float: left" src="images/navBar_02.png"></a>
+			<a id="3" href="http://www.phosphonet.ca" target="_blank"><img id="phosphonet" width="127" height="40" style="float: left" src="images/navBar_03.png"></a>
+			<a id="4" href="http://www.onconet.ca" target="_blank"><img id="onconet" width="107" height="40" style="float: left" src="images/navBar_04.png"></a>
+			<a id="5" href="http://www.kinasenet.ca" target="_blank"><img id="kinasenet" width="111" height="40" style="float: left" src="images/navBar_05.png"></a>
+			<a id="6" href="http://www.drugkinet.ca" target="_blank"><img id="drugkinet" width="118" height="40" style="float: left" src="images/navBar_06.png"></a>
+			<a id="7" href="http://www.kinet-am.ca" target="_blank"><img id="kinetam" width="105" height="40" style="float: left" src="images/navBar_07.png"></a>
+			<a id="8" href="http://www.kinexus.ca/kinetica" target="_blank"><img id="kinetica" width="163" height="40" style="float: left" src="images/navBar_08.png"></a>
+		</div>
+		<!--Query bar-->
+		<div style="height: 40px; width: 1000px; border-bottom: lightskyblue solid 1px; background: black">
+			<!--Select & dropdown-->
+			<div style="width: 580px; height: 40px; float: left;">
+				<!--select-->
+				<div style="float:left;width:300px;color:#738569; text-align: center; padding-top: 10px;font-weight: bold;
+		            font-size: 14px; line-height: 14px">
+					Select type of query desired
+				</div>
+				<!--dropdown-->
+				<div class="dropdown" style="float:left;padding: 3.6px 9px 3.6px 9px">
+					<button class="dropdown-toggle" style="width: 240px;
+						border-radius: 7px; background-color: #c0c0c0;
+						font-size: 12px; text-align: left; margin-top: 4px" type="button" id="dropdownMenuButton" data-toggle="dropdown">Click to view options</button>
+					<div class="dropdown-menu" style="border-radius: 7px; padding: 1px; background-color: #c0c0c0">
+						<a class="dropdown-item" style="padding: 1px 0 1px 1px; font-size: 14px" href="http://www.drugpronet.ca/ProteinDrugQuery.html">Protein-focused Drug Interaction</a>
+						<a class="dropdown-item" style="padding: 1px 0 1px 1px; font-size: 14px" href="http://www.drugpronet.ca/DrugProteinQuery.html">Drug-focused Protein Interaction</a>
+						<a class="dropdown-item" style="padding: 1px 0 1px 1px; font-size: 14px" href="http://www.drugpronet.ca/ProteinInfo.html">Protein Information</a>
+						<a class="dropdown-item" style="padding: 1px 0 1px 1px; font-size: 14px" href="http://www.drugpronet.ca/DrugInfo.html">Drug Information</a>
+					</div>
+				</div>
+			</div>
+			<!--links-->
+			<div style="float: left; width: 420px; height: 33px; padding-left: 12px; padding-top: 12px;
+				 font-size: 13px;">
+				<span style="border-right: #FC0 solid 3px; color: #8F72C5; padding-right: 7px; font-weight: bold">Updated: 2018 May </span>
+				<a href="http://www.genexus.ca" style="border-right: #FC0 solid 3px; color: #FC0; padding-left: 6px; padding-right: 6px;">Home</a>
+				<a href="http://www.kinexus.ca" style="border-right: #FC0 solid 3px; color: #FC0; padding-left: 5px; padding-right: 6px;" target="_blank">Kinuxus</a>
+				<a href="http://www.kinexus.ca/contact/contact.htm" style="border-right: #FC0 solid 3px; color: #FC0; padding-left: 5px; padding-right: 6px;">Contact</a>
+				<a href="http://www.drugpronet.ca/credits.html" style="border-right: #FC0 solid 3px; color: #FC0; padding-left: 5px; padding-right: 6px;">Credits</a>
+			</div>
+		</div>
+		<!--Information for the site-->
+		<div style="clear: both; box-sizing: content-box">
+			<div style="padding-top: 20px; box-sizing: inherit">
+				<!--label 1-->
+				<div style="clear: both; width: 174px; text-align: right; float: left; color: #708591; margin-bottom: 20px;
+		                padding: 10px 8px; font-size: 14px; box-sizing: inherit">
+					<p style="color: #708591; font-size: 15px; margin-bottom: 10px;line-height: 150%; font-weight: bold">
+						Query Type
+					</p>
+				</div>
+				<!--home info 1-->
+				<div style="box-sizing: inherit; padding: 10px 20px; width: 450px; float: left; margin-bottom: 20px;">
+					<p style="color: #FC0; margin-bottom: 8px; font-weight: bold;">
+						Protein Information
+					</p>
+					<p style="color: #738569">
+						This query provides detailed information on over 600 proteins that
+						have been experimentally identified as targets for inhibitory drugs.
+						Follow the instructions below to retrieve information on a specific
+						protein of interest.
+					</p>
+				</div>
+				<!--ad-->
+				<div style="width: 300px; margin-top: 20px; margin-bottom: 20px; float: right;">
+					<a id="AdRotatorLink" href="http://www.kinexus.ca/ourServices/substrate_profiling/index.html" target="_blank">
+						<img id="AdRotatorImg" src="images/10MY25WebsiteBannerAds-1v0.1.jpg" alt="Need cells cultured and treated to your specifications? Try our Custom Cell Preparation Services">
+					</a>
+				</div>
+				<!--label 2-->
+				<div style="clear: both; width: 174px; text-align: right; float: left; color: #708591; margin-bottom: 20px;
+		                padding: 10px 8px; font-size: 14px; box-sizing: inherit">
+					<p style="color: #708591; font-size: 15px; margin-bottom: 10px;line-height: 150%; font-weight: bold">
+						Filters
+					</p>
+				</div>
+				<!--home info 2-->
+				<div style="box-sizing: inherit; padding: 10px 20px; width: 760px; float: left; margin-bottom: 20px;">
+					<p style="color: #FC0; margin-bottom: 8px; font-weight: bold;">
+						Step 1 - Protein Specification
+					</p>
+					<p style="color: #738569">
+						Enter the first few characters for a gene name, protein name,
+						UniProt ID or NCBI RefSeq ID of the target human protein and
+						then select the desired search term from the Drop Down List.
+					</p>
+					<!--Start of form-->
+					<form action="FILLMEIN.php" method="post">
+						<input id="threeLetters" name="threeLetters" class="rounded" type="text" placeholder="Type in at least 3 letters of search term"
+						       style="width:300px; text-align: center; background-color: #c0c0c0; border: #c0c0c0;">
+						<p style="color: #FC0; margin-bottom: 8px; font-weight: bold; padding-top: 25px">
+							Step 2 - Retrieve Protein Information
+						</p>
+						<p style="color: #738569; padding-bottom: 15px">
+							Click on the buttons below to retrieve information on the protein of
+							interest or to reset the parameters for a new query.
+						</p>
+						<input class="rounded" type="submit" value="Retrieve Information" style="margin-right: 20px">
+						<input class="rounded" type="reset" value="Reset" style="margin-left: 20px">
+					</form>
+
+				</div>
+				<!--label for footer-->
+				<div style="clear: both; width: 174px; text-align: right; float: left; color: #708591; margin-bottom: 20px;
+		                padding: 10px 8px; font-size: 14px; box-sizing: inherit">
+					<p style="color: #738569; font-size: 15px; margin-bottom: 10px;line-height: 150%;">
+						&nbsp;
+					</p>
+				</div>
+				<!--footer-->
+				<div style="box-sizing: inherit; padding: 10px 20px; width: 770px; float: left;  text-align: center">
+					<p style="color: #738569;; margin-bottom: 8px; font-weight: bold;">
+						Copyright © 2018 Kinexus Bioinformatics Corporation.  All rights reserved.
+					</p>
 				</div>
 			</div>
 		</div>
-		<!--links-->
-		<div style="float: left; width: 420px; height: 33px; padding-left: 12px; padding-top: 12px;
-			 font-size: 13px;">
-			<span style="border-right: #FC0 solid 3px; color: #8F72C5; padding-right: 7px; font-weight: bold">Updated: 2018 May </span>
-			<a href="http://www.genexus.ca" style="border-right: #FC0 solid 3px; color: #FC0; padding-left: 6px; padding-right: 6px;">Home</a>
-			<a href="http://www.kinexus.ca" style="border-right: #FC0 solid 3px; color: #FC0; padding-left: 5px; padding-right: 6px;" target="_blank">Kinuxus</a>
-			<a href="http://www.kinexus.ca/contact/contact.htm" style="border-right: #FC0 solid 3px; color: #FC0; padding-left: 5px; padding-right: 6px;">Contact</a>
-			<a href="http://www.drugpronet.ca/credits.html" style="border-right: #FC0 solid 3px; color: #FC0; padding-left: 5px; padding-right: 6px;">Credits</a>
-		</div>
 	</div>
-	<!--Information for the site-->
-	<div style="clear: both; box-sizing: content-box">
-		<div style="padding-top: 20px; box-sizing: inherit">
-			<!--label 1-->
-			<div style="clear: both; width: 174px; text-align: right; float: left; color: #708591; margin-bottom: 20px;
-	                padding: 10px 8px; font-size: 14px; box-sizing: inherit">
-				<p style="color: #708591; font-size: 15px; margin-bottom: 10px;line-height: 150%; font-weight: bold">
-					Query Type
-				</p>
-			</div>
-			<!--home info 1-->
-			<div style="box-sizing: inherit; padding: 10px 20px; width: 450px; float: left; margin-bottom: 20px;">
-				<p style="color: #FC0; margin-bottom: 8px; font-weight: bold;">
-					Protein Information
-				</p>
-				<p style="color: #738569">
-					This query provides detailed information on over 600 proteins that
-					have been experimentally identified as targets for inhibitory drugs.
-					Follow the instructions below to retrieve information on a specific
-					protein of interest.
-				</p>
-			</div>
-			<!--ad-->
-			<div style="width: 300px; margin-top: 20px; margin-bottom: 20px; float: right;">
-				<a id="AdRotatorLink" href="http://www.kinexus.ca/ourServices/substrate_profiling/index.html" target="_blank">
-					<img id="AdRotatorImg" src="images/10MY25WebsiteBannerAds-1v0.1.jpg" alt="Need cells cultured and treated to your specifications? Try our Custom Cell Preparation Services">
-				</a>
-			</div>
-			<!--label 2-->
-			<div style="clear: both; width: 174px; text-align: right; float: left; color: #708591; margin-bottom: 20px;
-	                padding: 10px 8px; font-size: 14px; box-sizing: inherit">
-				<p style="color: #708591; font-size: 15px; margin-bottom: 10px;line-height: 150%; font-weight: bold">
-					Filters
-				</p>
-			</div>
-			<!--home info 2-->
-			<div style="box-sizing: inherit; padding: 10px 20px; width: 760px; float: left; margin-bottom: 20px;">
-				<p style="color: #FC0; margin-bottom: 8px; font-weight: bold;">
-					Step 1 - Protein Specification
-				</p>
-				<p style="color: #738569">
-					Enter the first few characters for a gene name, protein name,
-					UniProt ID or NCBI RefSeq ID of the target human protein and
-					then select the desired search term from the Drop Down List.
-				</p>
-				<!--Start of form-->
-				<form action="FILLMEIN.php" method="post">
-					<input id="threeLetters" class="rounded" type="text" placeholder="Type in at least 3 letters of search term"
-					       style="width:300px; text-align: center; background-color: #c0c0c0; border: #c0c0c0;">
-					<p style="color: #FC0; margin-bottom: 8px; font-weight: bold; padding-top: 25px">
-						Step 2 - Retrieve Protein Information
-					</p>
-					<p style="color: #738569; padding-bottom: 15px">
-						Click on the buttons below to retrieve information on the protein of
-						interest or to reset the parameters for a new query.
-					</p>
-					<input class="rounded" type="submit" value="Retrieve Information" style="margin-right: 20px">
-					<input class="rounded" type="reset" value="Reset" style="margin-left: 20px">
-				</form>
-
-			</div>
-			<!--label for footer-->
-			<div style="clear: both; width: 174px; text-align: right; float: left; color: #708591; margin-bottom: 20px;
-	                padding: 10px 8px; font-size: 14px; box-sizing: inherit">
-				<p style="color: #738569; font-size: 15px; margin-bottom: 10px;line-height: 150%;">
-					&nbsp;
-				</p>
-			</div>
-			<!--footer-->
-			<div style="box-sizing: inherit; padding: 10px 20px; width: 770px; float: left;  text-align: center">
-				<p style="color: #738569;; margin-bottom: 8px; font-weight: bold;">
-					Copyright © 2018 Kinexus Bioinformatics Corporation.  All rights reserved.
-				</p>
-			</div>
-		</div>
-		<!--<div style="height: 30px; width: 1000px; position: fixed; bottom: 0; background-color: green;">-->
-		<!--</div>-->
-	</div>
-</div>
 <!--floating home and top-->
-<div style="height: 30px; width: 190px; position: fixed; bottom: 0; background-image: url('images/footer.jpg'); background-repeat: repeat-y;;">
+<div style="height: 30px; width: 190px; position: fixed; bottom: 0; background: url('images/footer.jpg') repeat-y;">
 	<div style="width: 40px; float: left">&nbsp</div>
 	<div style="width: 150px; float: left; text-align: center;">
 		<a href="index.html" style="border-right: #FC0 solid 2px; color: #FC0; padding-left: 5px; padding-right: 5px; font-weight: bold;">Home</a>
@@ -171,6 +168,7 @@
 		changeNavbar("8", "kinetica");
 	})
 </script>
+<!--script to deal with rotating ads-->
 <script>
 	$(function(){
 		// So that the first ad is random
