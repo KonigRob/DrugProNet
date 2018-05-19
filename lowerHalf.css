@@ -1,0 +1,132 @@
+#infoDiv{
+	clear: both;
+	box-sizing: content-box;
+	padding-top: 20px;
+}
+
+.labelHeading{
+	clear: both;
+	width: 174px;
+	text-align: right;
+	float: left;
+	color: #708591;
+	margin-bottom: 20px;
+	padding: 10px 8px;
+	font-size: 14px;
+	box-sizing: inherit;
+}
+
+.labelHeading p{
+	color: #708591;
+	font-size: 15px;
+	margin-bottom: 10px;
+	line-height: 150%;
+	font-weight: bold
+}
+
+#footerBox{
+	box-sizing: inherit;
+	padding: 10px 20px;
+	width: 770px;
+	float: left;
+	text-align: center
+}
+
+#footerBox p{
+	color: #738569;
+	margin-bottom: 8px;
+	font-weight: bold;
+}
+
+
+
+.infoBox{
+	box-sizing: inherit;
+	padding: 10px 20px;
+	width: 760px;
+	float: left;
+	margin-bottom: 20px;
+}
+
+.infoBoxGoldHeading{
+	color: #FC0;
+	margin-bottom: 8px;
+	font-weight: bold;
+}
+
+#homeTopBox{
+	height: 30px;
+	width: 190px;
+	position: fixed;
+	bottom: 0;
+	background: url('images/footer.jpg') repeat-y;
+}
+
+#homeLink{
+	border-right: #FC0 solid 2px;
+	color: #FC0;
+	padding-left: 5px;
+	padding-right: 5px;
+	font-weight: bold;
+}
+
+#topLink{
+	color: #FC0;
+	padding-left: 5px;
+	padding-right: 5px;
+	font-weight: bold;
+}
+
+#ad{
+	width: 300px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	float: right;
+}
+
+#threeLetters{
+	width:300px;
+	text-align: center;
+	background-color: #c0c0c0;
+	border: #c0c0c0;
+}
+
+.steps{
+	color: #FC0;
+	margin-bottom: 8px;
+	font-weight: bold;
+	padding-top: 25px
+}
+
+
+#humanProtein {
+	padding-left: 0;
+	width: auto;
+}
+
+#humanProtein li {
+	list-style-type: none;
+	font-size: 14pt;
+	padding: 0 6px;
+	background: #c0c0c0;
+}
+
+#humanProtein li span:hover {
+	background-color: yellow;
+	cursor: pointer;
+	border-radius: 7px;
+}
+
+#humanProtein li span {
+	display: block;
+}
+
+#humanProtein li:first-child {
+	border-top-left-radius: 7px;
+	border-top-right-radius: 7px;
+}
+
+#humanProtein li:last-child {
+	border-bottom-left-radius: 7px;
+	border-bottom-right-radius: 7px;
+}
