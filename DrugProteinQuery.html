@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>
+		DrugProNet
+	</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
+	      integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
+	      crossorigin="anonymous">
+	<link rel="stylesheet" href="upperBar.css">
+	<link rel="stylesheet" href="lowerHalf.css">
+</head>
+<body id="top">
+<div>
+	<div>
+		<div id="header">
+			<a href="index.html" target="_blank">
+				<img class="img-fluid" src="images/DrugProNETBanner.jpg">
+			</a>
+		</div>
+	</div>
+	<!--Navbar with links-->
+	<div id="navbarWithLinks">
+		<a id="1" href="http://kinatlas.ca:8080" target="_blank"><img id="kinatlas" width="128" height="40" src="images/navBar_01.png"></a>
+		<a id="2" href="http://www.transcriptonet.ca" target="_blank"><img id="transcriptonet" width="141" height="40" src="images/navBar_02.png"></a>
+		<a id="3" href="http://www.phosphonet.ca" target="_blank"><img id="phosphonet" width="127" height="40" src="images/navBar_03.png"></a>
+		<a id="4" href="http://www.onconet.ca" target="_blank"><img id="onconet" width="107" height="40" src="images/navBar_04.png"></a>
+		<a id="5" href="http://www.kinasenet.ca" target="_blank"><img id="kinasenet" width="111" height="40" src="images/navBar_05.png"></a>
+		<a id="6" href="http://www.drugkinet.ca" target="_blank"><img id="drugkinet" width="118" height="40" src="images/navBar_06.png"></a>
+		<a id="7" href="http://www.kinet-am.ca" target="_blank"><img id="kinetam" width="105" height="40" src="images/navBar_07.png"></a>
+		<a id="8" href="http://www.kinexus.ca/kinetica" target="_blank"><img id="kinetica" width="163" height="40" src="images/navBar_08.png"></a>
+	</div>
+	<!--Query bar-->
+	<div id="queryBar">
+		<!--Select & dropdown-->
+		<div id="selectAndDrop">
+			<!--select-->
+			<div id="select">
+				Select type of query desired
+			</div>
+			<!--dropdown-->
+			<div class="dropdown" id="dropDown">
+				<button class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown">Click to view options</button>
+				<div class="dropdown-menu" id="dropDownmEnu">
+					<a class="dropdown-item" href="http://www.drugpronet.ca/ProteinDrugQuery.html">Protein-focused Drug Interaction</a>
+					<a class="dropdown-item" href="http://www.drugpronet.ca/DrugProteinQuery.html">Drug-focused Protein Interaction</a>
+					<a class="dropdown-item" href="http://www.drugpronet.ca/ProteinInfo.html">Protein Information</a>
+					<a class="dropdown-item" href="http://www.drugpronet.ca/DrugInfo.html">Drug Information</a>
+				</div>
+			</div>
+		</div>
+		<!--links-->
+		<div id="links">
+			<span id="updatePurple">Updated: 2018 May </span>
+			<a href="http://www.genexus.ca">Home</a>
+			<a href="http://www.kinexus.ca" target="_blank">Kinuxus</a>
+			<a href="http://www.kinexus.ca/contact/contact.htm">Contact</a>
+			<a href="http://www.drugpronet.ca/credits.html">Credits</a>
+		</div>
+	</div>
+	<!--Information for the site-->
+	<div style="clear: both; box-sizing: content-box">
+		<div style="padding-top: 20px; box-sizing: inherit">
+			<!--label 1-->
+			<div style="clear: both; width: 174px; text-align: right; float: left; color: #708591; margin-bottom: 20px;
+		                padding: 10px 8px; font-size: 14px; box-sizing: inherit">
+				<p style="color: #708591; font-size: 15px; margin-bottom: 10px;line-height: 150%; font-weight: bold">
+					Query Type
+				</p>
+			</div>
+			<!--home info 1-->
+			<div style="box-sizing: inherit; padding: 10px 20px; width: 450px; float: left; margin-bottom: 20px;">
+				<p style="color: #FC0; margin-bottom: 8px; font-weight: bold;">
+					Drug-focused Protein Identification
+				</p>
+				<p style="color: #738569">
+					This query provides listings of atom-to-atom interaction pairs
+					between a small drug molecule and a protein. Interactions are
+					defined by distance between the atoms, which are measured in
+					Angstroms. The data in this database are extracted from
+					coordinate information of co-crystallization files in the RCSB PDB
+					Protein Data Bank. The Protein Drug Interaction database
+					currently contains data from over 4500 co-crystallization files.
+				</p>
+			</div>
+			<!--ad-->
+			<div style="width: 300px; margin-top: 20px; margin-bottom: 20px; float: right;">
+				<a id="AdRotatorLink" href="http://www.kinexus.ca/ourServices/substrate_profiling/index.html" target="_blank">
+					<img id="AdRotatorImg" src="images/10MY25WebsiteBannerAds-1v0.1.jpg" alt="Need cells cultured and treated to your specifications? Try our Custom Cell Preparation Services">
+				</a>
+			</div>
+			<!--label 2-->
+			<div style="clear: both; width: 174px; text-align: right; float: left; color: #708591; margin-bottom: 20px;
+		                padding: 10px 8px; font-size: 14px; box-sizing: inherit">
+				<p style="color: #708591; font-size: 15px; margin-bottom: 10px;line-height: 150%; font-weight: bold">
+					Filters
+				</p>
+			</div>
+			<!--home info 2-->
+			<div style="box-sizing: inherit; padding: 10px 20px; width: 760px; float: left; margin-bottom: 20px;">
+				<p style="color: #FC0; margin-bottom: 8px; font-weight: bold;">
+					Step 1 - Drug Specification
+				</p>
+				<p style="color: #738569">
+					Provide the drug name, CAS ID, PubChem ID or ChEMBL ID of
+					the compound of interest as a search term.
+				</p>
+				<!--Start of form-->
+				<form action="FILLMEIN.php" method="post">
+					<input id="threeLetters" name="threeLetters" class="rounded" type="text" placeholder="Type in at least 3 letters of search term"
+					       style="width:300px; text-align: center; background-color: #c0c0c0; border: #c0c0c0;">
+					<ul id="humanProtein"></ul>
+					<p style="color: #FC0; margin-bottom: 8px; font-weight: bold; padding-top: 25px">
+						Step 2 - Protein Specification
+					</p>
+					<p style="color: #738569; padding-bottom: 15px">
+						Use the pull-down menu below to select for the protein of interest.
+					</p>
+
+					<select class="rounded" name="outputOptions" id="outputOptions" required style="background-color: #c0c0c0; border: #c0c0c0;">
+						<option value="" disabled selected hidden>Select from list of output options</option>
+						<option>2</option>
+					</select>
+					<p style="color: #FC0; margin-bottom: 8px; font-weight: bold; padding-top: 25px">
+						Step 3 - Interaction Distance Specification
+					</p>
+					<p style="color: #738569; padding-bottom: 15px">
+						Use the pull-down menu below to set the maximum value for
+						interaction distance (in Angstroms) between atoms.
+					</p>
+					<select class="rounded" name="linkDistance" style="background-color: #c0c0c0; border: #c0c0c0;">
+						<option value="0.5">0.5</option>
+						<option value="1">1</option>
+						<option value="1.5">1.5</option>
+						<option value="2">2</option>
+						<option value="2.5">2.5</option>
+						<option value="3">3</option>
+						<option value="3.5">3.5</option>
+						<option value="4">4</option>
+						<option value="4.5">4.5</option>
+						<option value="5" selected>5</option>
+						<option value="5.5">5.5</option>
+						<option value="6">6</option>
+						<option value="6.5">6.5</option>
+						<option value="7">7</option>
+						<option value="7.5">7.5</option>
+					</select>
+
+					<p style="color: #FC0; margin-bottom: 8px; font-weight: bold; padding-top: 25px">
+						Step 4 - Display Parameter Specification
+					</p>
+					<p style="color: #738569; padding-bottom: 15px">
+						Boxes that are marked are activated to display. Click on boxes
+						to change status.
+					</p>
+					<input type="checkbox" id="proteinChain" name="displayParameter" value="proteinChain" checked>
+					<label for="proteinChain" style="color: #c0c0c0; margin: 0">Show protein chain</label><br />
+					<input type="checkbox" id="proteinAtoms" name="displayParameter" value="proteinAtoms" checked>
+					<label for="proteinAtoms" style="color: #c0c0c0; margin: 0">Show protein atoms</label><br />
+					<input type="checkbox" id="proteinResidues" name="displayParameter" value="proteinResidues" checked>
+					<label for="proteinResidues" style="color: #c0c0c0; margin: 0">Show protein residues</label><br />
+					<input type="checkbox" id="proteinResidueNumbers" name="displayParameter" value="proteinResidueNumbers" checked>
+					<label for="proteinResidueNumbers" style="color: #c0c0c0; margin: 0">Show protein residue numbers</label><br />
+					<input type="checkbox" id="drugAtoms" name="displayParameter" value="drugAtoms" checked>
+					<label for="drugAtoms" style="color: #c0c0c0; margin: 0">Show drug atoms</label><br />
+
+					<p style="color: #FC0; margin-bottom: 8px; font-weight: bold; padding-top: 25px">
+						Step 5 - Report Generation
+					</p>
+					<p style="color: #738569; padding-bottom: 15px">
+						Click on box below to produce custom tables with results or to
+						reset the parameters.
+					</p>
+
+
+
+					<input class="rounded" type="submit" value="Generate Table" style="margin-right: 20px">
+					<input class="rounded" type="reset" value="Reset" style="margin-left: 20px">
+				</form>
+
+			</div>
+			<!--label for footer-->
+			<div style="clear: both; width: 174px; text-align: right; float: left; color: #708591; margin-bottom: 20px;
+		                padding: 10px 8px; font-size: 14px; box-sizing: inherit">
+				<p style="color: #738569; font-size: 15px; margin-bottom: 10px;line-height: 150%;">
+					&nbsp;
+				</p>
+			</div>
+			<!--footer-->
+			<div style="box-sizing: inherit; padding: 10px 20px; width: 770px; float: left;  text-align: center">
+				<p style="color: #738569;; margin-bottom: 8px; font-weight: bold;">
+					Copyright © 2018 Kinexus Bioinformatics Corporation.  All rights reserved.
+				</p>
+			</div>
+		</div>
+	</div>
+</div>
+<!--floating home and top-->
+<div style="height: 30px; width: 190px; position: fixed; bottom: 0; background: url('images/footer.jpg') repeat-y;;">
+	<div style="width: 40px; float: left">&nbsp</div>
+	<div style="width: 150px; float: left; text-align: center;">
+		<a href="index.html" style="border-right: #FC0 solid 2px; color: #FC0; padding-left: 5px; padding-right: 5px; font-weight: bold;">Home</a>
+		<a href="#top" style="color: #FC0; padding-left: 5px; padding-right: 5px; font-weight: bold;">Top</a>
+	</div>
+</div>
+<!--script to deal with navbar hover over-->
+<script>
+	function changeNavbar(number, weblink){
+		$('#' + number).hover(function () {
+			$('#' + weblink).attr("src", "images/navBarHover_0"+number+".png");
+		}, function () {
+			$('#' + weblink).attr("src", "images/navBar_0"+number+".png");
+		});
+	}
+	$(function () {
+		changeNavbar("1", "kinatlas");
+		changeNavbar("2", "transcriptonet");
+		changeNavbar("3", "phosphonet");
+		changeNavbar("4", "onconet");
+		changeNavbar("5", "kinasenet");
+		changeNavbar("6", "drugkinet");
+		changeNavbar("7", "kinetam");
+		changeNavbar("8", "kinetica");
+	})
+</script>
+<!--script to deal with rotating ads-->
+<script>
+	$(function(){
+		// So that the first ad is random
+		returnAd();
+		// And all the following ads are "random"
+		setInterval(returnAd, 30000);
+	});
+	function returnAd(){
+		let adsAltText = ["Need cells cultured and treated to your specifications? Try our Custom Cell Preparation Services",
+			"Want to identify kinase substrates, their phospho-sites and detection antibodies?  Try our unique Custom Kinase-Substrate Profilling Services",
+			"Need to inexpensively test the specificity of your kinase inhibitors?  Try our Protein Kinase Microarray Servies for US$1.67 per kinase",
+			"What to screen your cell/tissue Iysates against > 800 anitbodies?  Try our Antibody Microarray Services for US$1.10 per antibody",
+			"Looking for a cost-effective strategy for biomarker discover and validation?  Try our antibody Microarray and Custom Multi-immunoblotting Services",
+			"Want to screen cells/tissues for altered protein expression and phosphorylation?  Our Antibody Microarray Services track over 500 signalling proteins",
+			"Need to rapidly characterize a new protein or phospho-site for regulation?  Try our Standard Reverse Lysate Microarray Services",
+			"Need to evaluate hundreds of your tissue lysates for biomarker validation?  Try our Custom Reverse Lysate Microarray Services",
+			"Need to inexpensively and rapidly validate gene or protein microarray data?  Try our Custom Kinetworks™ Multi-immunoblotting Services",
+			"Want to accurately quantify protein phosphorylation in your cell tissue lysates?  Try our Phospho-site Multi-immunoblotting Services for US$20 per target",
+			"Want to accurately quantify kinase expression in your cell tissue lysates?  Try our Protein Kinase Multi-immunoblottting Services for US$10 per target",
+			"Want to compare your Kinexus proteomics data with thousands of other studies?  Query our KiNET Immunoblotting DataBase online with free access",
+			"Want to visualize the locations of proteins and phosphorylation reactions in cells?  Check out of Custom Immunohistochemistry Services",
+			"Need mg to gram quantities of recombinant forms of your favorite proteins?  Try our Custom Recombinant Protein Production Services",
+			"Need mg quantities of synthetic peptides with special modifications?  Try our Custom Peptide Synthesis Services",
+			"Need to identify optimal peptide substrate or perform epitope mapping?  Try our Custom Peptide Array production Services",
+			"Need help with presentation of your proteomics data from Kinexus?  Try our Custom Graphics Services for US$89 per figure"
+		];
+		let adsImgLink = ["",
+			"http://www.kinexus.ca/ourServices/substrate_profiling/index.html",
+			"http://www.kinexus.ca/ourServices/cellCulture/index.html",
+			"http://www.kinexus.ca/ourServices/microarrays/antibody_microarrays/antibody_microarrays.html",
+			"http://www.kinexus.ca/ourServices/microarrays/antibody_microarrays/antibody_microarrays.html",
+			"http://www.kinexus.ca/ourServices/microarrays/antibody_microarrays/antibody_microarrays.html",
+			"http://www.kinexus.ca/ourServices/microarrays/reverse_microarrays/reverse_microarrays.html",
+			"http://www.kinexus.ca/ourServices/microarrays/reverse_microarrays/reverse_microarrays.html",
+			"http://www.kinexus.ca/ourServices/immunoblotting/custom_profiling/custom_profiling.html",
+			"http://www.kinexus.ca/ourServices/immunoblotting/phosphosite_profiling/phosphosite_profiling.html",
+			"http://www.kinexus.ca/ourServices/immunoblotting/kinase_profiling/kinase_profiling.html",
+			"http://www.kinet.ca",
+			"http://www.kinexus.ca/ourServices/immunohistochemistry/immunohistochemistry.html",
+			"http://www.kinexus.ca/ourServices/proteinAndPeptide/recombinantproteinsynthesis/index.html",
+			"http://www.kinexus.ca/ourServices/proteinAndPeptide/peptidesynthesis/index.html",
+			"http://www.kinexus.ca/ourServices/proteinAndPeptide/peptidearraysynthesis/index.html",
+			"http://www.kinexus.ca/ourServices/custom_graphics/custom_graphics.html"
+		];
+		let randomAdNumber = Math.floor(Math.random() * 17);
+		let img = $('#AdRotatorImg');
+		let link = $('#AdRotatorLink');
+		link.attr("href", adsImgLink[randomAdNumber]);
+		img.attr("src", "images/10MY25WebsiteBannerAds-"+(randomAdNumber+1)+"v0.1.jpg");
+		img.attr("alt", adsAltText[randomAdNumber]);
+	}
+</script>
+<!--script to deal with humanProtein query-->
+<script>
+	/*<![CDATA[*/
+	$(document).ready(function() {
+
+		let search_text_input = document.getElementById("threeLetters");
+		let dropdown_list = document.getElementById("humanProtein");
+
+		dropdown_list.style.border = "0px";
+		search_text_input.addEventListener('keyup', function(evt) {
+			// don't send the server an empty string
+			dropdown_list.innerHTML = "";
+			dropdown_list.style.border = "0px";
+			dropdown_list.style.backroundColor = "#ffffff";
+			if(this.value.length === 0) {
+				return;
+			}
+			$.ajax({
+				url: "php/AutoComplete/DPQueryAC.php",
+				type: "GET",
+				dataType: "JSON",
+				data: { search: this.value},
+				success: function(resultData) {
+					if(resultData['status'] === 'success') {
+						let movies = resultData['compound'];
+						if(movies.length > 0) {
+							dropdown_list.style.border = "1px solid black";
+							for(let i = 0; i < movies.length; i++) {
+								//console.log(movies[i].name);
+								let li = document.createElement("li");
+								li.addEventListener('click', function(evt) {
+									search_text_input.value = this.children[0].innerHTML;
+									// now empty the list since an item has been selected
+									dropdown_list.innerHTML = "";
+									dropdown_list.style.border = "0px";
+								});
+								li.innerHTML = "<span>" + movies[i].name + "</span>";
+								dropdown_list.appendChild(li);
+							}
+						} else {
+							dropdown_list.innerHTML =
+								"<li style='background-color: #c0c0c0'>Nothing found.</li>";
+						}
+
+					} else {
+						console.log(resultData, "Empty set.");
+					}
+				},
+				error: function(jqXHR, textStatus, errorThrown) {
+					console.log(jqXHR.statusText, textStatus);
+				}
+			});
+		});
+	});
+	/*]]>*/
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"
+        integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"
+        integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
+        crossorigin="anonymous"></script>
+
+</body>
+</html>

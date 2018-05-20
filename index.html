@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>
+		DrugProNet
+	</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
+	      integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
+	      crossorigin="anonymous">
+	<link rel="stylesheet" href="upperBar.css">
+	<link rel="stylesheet" href="lowerHalf.css">
+</head>
+<body id="top">
+	<div>
+		<div>
+			<div id="header">
+				<a href="index.html" target="_blank">
+					<img class="img-fluid" src="images/DrugProNETBanner.jpg">
+				</a>
+			</div>
+		</div>
+		<!--Navbar with links-->
+		<div id="navbarWithLinks">
+			<a id="1" href="http://kinatlas.ca:8080" target="_blank"><img id="kinatlas" width="128" height="40" src="images/navBar_01.png"></a>
+			<a id="2" href="http://www.transcriptonet.ca" target="_blank"><img id="transcriptonet" width="141" height="40" src="images/navBar_02.png"></a>
+			<a id="3" href="http://www.phosphonet.ca" target="_blank"><img id="phosphonet" width="127" height="40" src="images/navBar_03.png"></a>
+			<a id="4" href="http://www.onconet.ca" target="_blank"><img id="onconet" width="107" height="40" src="images/navBar_04.png"></a>
+			<a id="5" href="http://www.kinasenet.ca" target="_blank"><img id="kinasenet" width="111" height="40" src="images/navBar_05.png"></a>
+			<a id="6" href="http://www.drugkinet.ca" target="_blank"><img id="drugkinet" width="118" height="40" src="images/navBar_06.png"></a>
+			<a id="7" href="http://www.kinet-am.ca" target="_blank"><img id="kinetam" width="105" height="40" src="images/navBar_07.png"></a>
+			<a id="8" href="http://www.kinexus.ca/kinetica" target="_blank"><img id="kinetica" width="163" height="40" src="images/navBar_08.png"></a>
+		</div>
+		<!--Query bar-->
+		<div id="queryBar">
+			<!--Select & dropdown-->
+			<div id="selectAndDrop">
+				<!--select-->
+				<div id="select">
+					Select type of query desired
+				</div>
+				<!--dropdown-->
+				<div class="dropdown" id="dropDown">
+					<button class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown">Click to view options</button>
+					<div class="dropdown-menu" id="dropDownmEnu">
+						<a class="dropdown-item" href="http://www.drugpronet.ca/ProteinDrugQuery.html">Protein-focused Drug Interaction</a>
+						<a class="dropdown-item" href="http://www.drugpronet.ca/DrugProteinQuery.html">Drug-focused Protein Interaction</a>
+						<a class="dropdown-item" href="http://www.drugpronet.ca/ProteinInfo.html">Protein Information</a>
+						<a class="dropdown-item" href="http://www.drugpronet.ca/DrugInfo.html">Drug Information</a>
+					</div>
+				</div>
+			</div>
+			<!--links-->
+			<div id="links">
+				<span id="updatePurple">Updated: 2018 May </span>
+				<a href="http://www.genexus.ca">Home</a>
+				<a href="http://www.kinexus.ca" target="_blank">Kinuxus</a>
+				<a href="http://www.kinexus.ca/contact/contact.htm">Contact</a>
+				<a href="http://www.drugpronet.ca/credits.html">Credits</a>
+			</div>
+		</div>
+		<!--Information for the site-->
+		<div id="infoDiv">
+			<!--label 1-->
+			<div class="labelHeading">
+				<p>
+					&nbsp;
+				</p>
+			</div>
+			<!--home info 1-->
+			<div class="infoBox">
+				<p class="infoBoxGoldHeading">
+					About DrugProNET ...
+				</p>
+				<p style="color: #c0c0c0">
+					DrugProNET is an open-access, knowledgebase developed by Kinexus Bioinformatics Corporation to foster the identification of
+					the most critical atomic interactions between drugs and their protein targets based on 3D x-ray crystallographic analyses.
+					Defining the key amino acid residues for drug binding in proteins permits the prediction of specific mutations in human genomes
+					that will affect the sensitivities of individuals to these compounds. The bond distances in Angstroms between the closest protein
+					and drug atoms in each crystal complex are provided in downloadable tables, along with definition of the closest amino acid
+					residue side-chains. DrugProNET features comprehensive information on over 2000 compounds that have been co-crystallized
+					with over 480 different human proteins in over 4400 protein-compound structures retrieved from the Research Collaboratory for
+					Structural Bioinformatics (RCSB) Protein Databank (PDB). In addition, information is also available for an additional 748
+					compounds that are inhibitors of protein kinases. The protein and drug data were retrieved from several sources, including the
+					RCSB PDB, Wikipedia, the Universal Protein Resource (UniProt), the National Center for Biotechnology Information’s (NCBI)
+					RefSeq and PubChem websites, and the European Molecular Biology Laboratory (EMBL) European Bioinformatics Institute’s
+					Kinase SARFari and ChEMBL websites.
+				</p>
+			</div>
+			<!--label 2-->
+			<div class="labelHeading">
+				<p>
+					&nbsp;
+				</p>
+			</div>
+			<!--home info 2-->
+			<div class="infoBox">
+				<p class="infoBoxGoldHeading">
+					Instructions ...
+				</p>
+				<p style="color: #c0c0c0">
+					DrugProNET is designed to be fast and simple to navigate. Just follow the steps outlined in each query. Presently, there are
+					four different types of queries that you can perform with DrugProNET. You can search for target proteins if you know their
+					UniProt ID, RefSeq ID, or one of their common gene or protein names. You can also query for approved drugs and other
+					compound of interest if you know their CAS ID, PubChem CID, ChEMBL ID or one of their common or chemical names. A list of
+					possible options for proteins or compounds are generated by typing at least two letters of their names or identification numbers,
+					and waiting for a few moments for a complete list to appear.
+				</p>
+			</div>
+			<!--label 3-->
+			<div class="labelHeading">
+				<p>
+					&nbsp;
+				</p>
+			</div>
+			<!--home info 3-->
+			<div class="infoBox">
+				<p class="infoBoxGoldHeading">
+					Other Useful Onlnie Resources From Kinexus ...
+				</p>
+				<p style="color: #c0c0c0">
+					DrugProNET is one of several useful open-access, online resources that are available from Kinexus to foster cell signalling
+					research by academic and industrial scientists. Direct links to several of our other knowledgebases in the SigNET KnowledgeBank
+					are provided just below the header at the top of each webpage in DrugProNET. Our related DrugKiNET knowledgebase
+					features comprehensive information on over 800 compounds that have been experimentally determined to inhibit human
+					protein kinases. This includes the retrieval of the lowest reported compound IC50, Ki and Kd values from several reputable
+					sources for over 105,000 experimentally tested, non-redundant kinase-compound pairs. Using this information for training, we
+					developed two kinase inhibitor prediction algorithms to further predict another 200,000 possible kinase-compound interactions.
+					TranscriptoNET provides gene expression information on over 20,300 human genes in over 600 diverse human cell lines,
+					organs and tissues. PhosphoNET features data on nearly 1 million confirmed or predicted human phosphorylation sites in the
+					proteins encoded by these genes. KinATLAS reveals interactions between these proteins with each other in signalling systems
+					as well as interactions with kinase inhibitory compounds. KinaseNET offers detailed information about 536 human protein
+					kinases, whereas OncoNET provides expression and mutation information for 3000 cancer-related proteins in diverse human
+					tissues and cell lines. For semi-quantitative data on actual protein expression in over 2,000 diverse biological specimens,
+					please also visit our open-access KiNET DataBank with over 2000 antibody microarray analyses with over 1700 diverse panand
+					phosphosite-specific antibodies. Most of these antibodies are available from Kinexus for screening lysates from cells and
+					tissues using our Kinex™ KAM antibody microarrays or as stand-alone products at our www.kinexusproducts.ca website.
+				</p>
+			</div>
+			<!--label for footer-->
+			<div class="labelHeading">
+				<p>
+					&nbsp;
+				</p>
+			</div>
+			<!--footer-->
+			<div id="footerBox">
+				<p>
+					Copyright © 2018 Kinexus Bioinformatics Corporation.  All rights reserved.
+				</p>
+			</div>
+		</div>
+	</div>
+	<!--floating home and top-->
+	<div id="homeTopBox">
+		<div style="width: 40px; float: left">&nbsp</div>
+		<div style="width: 150px; float: left; text-align: center;">
+			<a href="index.html" id="homeLink">Home</a>
+			<a href="#top" id="topLink">Top</a>
+		</div>
+	</div>
+	<!--script to deal with navbar hover over-->
+	<script>
+		function changeNavbar(number, weblink){
+			$('#' + number).hover(function () {
+				$('#' + weblink).attr("src", "images/navBarHover_0"+number+".png");
+			}, function () {
+				$('#' + weblink).attr("src", "images/navBar_0"+number+".png");
+			});
+		}
+		$(function () {
+			changeNavbar("1", "kinatlas");
+			changeNavbar("2", "transcriptonet");
+			changeNavbar("3", "phosphonet");
+			changeNavbar("4", "onconet");
+			changeNavbar("5", "kinasenet");
+			changeNavbar("6", "drugkinet");
+			changeNavbar("7", "kinetam");
+			changeNavbar("8", "kinetica");
+		})
+	</script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"
+	        integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ"
+	        crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"
+	        integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
+	        crossorigin="anonymous"></script>
+</body>
+</html>

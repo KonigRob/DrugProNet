@@ -1,0 +1,91 @@
+body{
+	background: url('images/footer.jpg') repeat-y black;
+	width: 1000px;
+	height: 100%;
+	font-family: arial, verdannada, san-serif;
+}
+
+#navbarWithLinks{
+	height: 40px;
+	width: 1000px;
+}
+
+#navbarWithLinks a{
+	float: left;
+}
+
+#queryBar{
+	height: 40px;
+	width: 1000px;
+	border-bottom: lightskyblue solid 1px;
+	background: black;
+}
+
+#selectAndDrop{
+	width: 580px;
+	height: 40px;
+	float: left;
+}
+
+#select{
+	float:left;
+	width:300px;
+	color:#738569;
+	text-align: center;
+	padding-top: 10px;
+	font-weight: bold;
+	font-size: 14px;
+	line-height: 14px;
+}
+
+#dropDown{
+	float:left;
+	padding: 3.6px 9px 3.6px 9px;
+}
+
+#dropDown button{
+	width: 240px;
+	border-radius: 7px;
+	background-color: #c0c0c0;
+	font-size: 12px;
+	text-align: left;
+	margin-top: 4px;
+}
+
+#dropDownmEnu{
+	border-radius: 7px;
+	padding: 1px;
+	background-color: #c0c0c0;
+}
+
+#dropDownmEnu a{
+	padding: 1px 33px 1px 2px;
+	font-size: 14px;
+}
+
+#dropDownmEnu a:hover{
+	border-radius: 7px;
+}
+
+#links{
+	float: left;
+	width: 420px;
+	height: 33px;
+	padding-left: 12px;
+	padding-top: 12px;
+	font-size: 13px;
+}
+
+#updatePurple{
+	border-right: #FC0 solid 3px;
+	color: #8F72C5;
+	padding-right: 7px;
+	font-weight: bold;
+}
+
+#links a{
+	border-right: #FC0 solid 3px;
+	color: #FC0;
+	padding: 0 6px;
+}
+
