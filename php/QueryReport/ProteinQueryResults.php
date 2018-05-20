@@ -2,8 +2,8 @@
 /**
  * Created by PhpStorm.
  * User: rob
- * Date: 19/05/18
- * Time: 3:52 PM
+ * Date: 20/05/18
+ * Time: 9:21 AM
  */
 ?>
 <!DOCTYPE html>
@@ -80,16 +80,18 @@
 		<!--home info 1-->
 		<div class="infoBox" style="width: 450px">
 			<p class="infoBoxGoldHeading">
-				Protein Description
+				Protein-Drug 3D Interaction
 			</p>
 			<p style="color: #738569">
-				This report provides detailed information on one of over 485
-				proteins that have been experimentally identified as targets for
-				inhibitory drugs and co-crystallized with these compounds. The
-				data has been annotated from multiple sources, including the US
-				National Center for Biotechnology Information, UniProt, and
-				Phosphosite Plus, and url links are provided to these and other
-				SigNET KnowledgeBases.
+				This report provides a listing of atom-to-atom interactions between
+				a protein of interest and a small drug molecule that have been
+				documented in co-crystallization files retrieved from the RCSB
+				PDB Protein Data Bank. In the second table, each row represents
+				a unique interaction between an atom on the protein and an atom
+				on the drug molecule. The distances between the atom pairs are
+				measured in Angstroms. Based on this data, the most important
+				amino acid residues involved in drug binding are identified in the
+				first table.
 			</p>
 		</div>
 		<!--ad-->
@@ -120,204 +122,110 @@
 			$result = mysqli_query($db, "SELECT * FROM new_countries WHERE new_countries.name LIKE '$obj'");
 			$row = mysqli_fetch_assoc($result);
 
-			$Nomenclature = ["Protein short name:", "Protein full name:", "Alias:", "Protein type:", "Kinase group:",
-							"Kinase family:", "Kinase subfamily:"];
+			$ProSpec = ["Protein Name:", "Protein Full Name:", "Alias:", "UniProt ID:", "NCBI ID:",
+							"Protein Type", "Kinase Group:", "Kinase Family:", "Number AA:", "Mass (Da):"];
 
-			$GeneOntology = ["Cell component:", "Molecular function:", "Biological process:"];
+			$DrugSpec = ["PDB Drug ID:", "Drug Short Name:", "Drug Chemical:", "Name:", "Drug Alias:", "Drug Formula:",
+						"Mass (Da):", "Potency:"];
 
-			$specificInfoLabels = ["Mass (Da):", "Number AA:", "UniProt ID:", "Entry ID", "NCBI RefSeq ID:", "Int. Protein ID",
-							"PhosphoNET ID:", "PhosphoSItePlus:", "KinaseNET ID:", "OncoNET ID:", "PDB Entries:"];
+			$PDBInfo = ["PDB Entry:", "Release Date:", "Resolution:", "Title:", "Authors:", "Reference"];
 
 			$entries = ["name", "name", "name", "name", "name", "name", "name", "name", "name", "name", "name", "name", "name",
 						"name", "name", "name", "name", "name", "name", "name", "name"];
 
 			/*
-			 * This is for the Nomenclature
+			 * This is for the Protein Specifications
 			 *
 			 */
 			//if the name isn't empty
-			$isNomBox = false;
-			$nomBox = '';
+			$isProBox = false;
+			$proBox = '';
 			/*You might need to change the checking of an empty cell*/
 			for($i = 0; $i < 7; ++$i){
 				if($row[$entries[$i]] !== ''){
-					$isNomBox = true;
-					$nomBox = $nomBox . "<div class='dataLabels'><p>$Nomenclature[$i]</p></div>
+					$isProBox = true;
+					$proBox = $proBox . "<div class='dataLabels'><p>$ProSpec[$i]</p></div>
 									<div class='dataBox'><p style='color: #c0c0c0'>".$row[$entries[$i]]."</p></div>";
 				}
 			}
-			if($isNomBox === true){
+			if($isProBox === true){
+				$proBox = $proBox. "<div class='dataLabels' style='margin-bottom: 20px'>&nbsp;</div><div class='dataBox' style='margin-bottom: 20px'><a href='' style='color:lightskyblue'>".$row[$entries[1]]."</a></div>";
 				echo "<div class='labelHeading'>
 				<p>
 					&nbsp;
 				</p>
 			</div><div class='infoBox'>
 				<p class='infoBoxGoldHeading'>
-					Nomenclature
+					Protein Specifications
 				</p>
-			</div>".$nomBox;
+			</div>".$proBox;
 			}
 			/*
-			 * This is for Cell component
-			 */
-			$isCell = false;
-			$cell = "";
-			if($row['name'] !== ''){
-				$cell = $cell . "<a href=".$row['name']." style='color: #c0c0c0 ; text-decoration: none; padding: 0 30px 0 0'  >".$row['name']."</a>";
-				$isCell = true;
-			}
-			if($row['name'] !== ''){
-				$cell = $cell . "<a href=".$row['name']." style='color: #c0c0c0 ; text-decoration: none; padding: 0 30px 0 0'  >".$row['name']."</a>";
-				$isCell = true;
-			}
-			if($row['name'] !== ''){
-				$cell = $cell . "<a href=".$row['name']." style='color: #c0c0c0 ; text-decoration: none; padding: 0 30px 0 0'  >".$row['name']."</a>";
-				$isCell = true;
-			}
-			if($isCell === true){
-				$cell = "<div class='dataLabels'><p>$GeneOntology[0]</p></div>
-						<div class='dataBox'>$cell</div>";
-//				$cell = "<div class='dataLabels'>$cell</div></div>";
-			}
-			/*
-			 * This is for Molecular
-			 */
-			$isMole = false;
-			$mol = "";
-			if($row['name'] !== ''){
-				$mol = $mol . "<a href=".$row['name']." style='color: #c0c0c0 ; text-decoration: none; padding: 0 30px 0 0'  >".$row['name']."</a>";
-				$isMole = true;
-			}
-			if($row['name'] !== ''){
-				$mol = $mol . "<a href=".$row['name']." style='color: #c0c0c0 ; text-decoration: none; padding: 0 30px 0 0'  >".$row['name']."</a>";
-				$isMole = true;
-			}
-			if($row['name'] !== ''){
-				$mol = $mol . "<a href=".$row['name']." style='color: #c0c0c0 ; text-decoration: none; padding: 0 30px 0 0'  >".$row['name']."</a>";
-				$isMole = true;
-			}
-			if($isMole === true){
-				$mol = "<div class='dataLabels'><p>$GeneOntology[1]</p></div>
-						<div class='dataBox'>$mol</div>";
-			}
-			/*
-			 * This is for Biological
-			 */
-			$isBio = false;
-			$bilo = "";
-			if($row['name'] !== ''){
-				$bilo = $bilo . "<a href=".$row['name']." style='color: #c0c0c0 ; text-decoration: none; padding: 0 30px 0 0'  >".$row['name']."</a>";
-				$isBio = true;
-			}
-			if($row['name'] !== ''){
-				$bilo = $bilo . "<a href=".$row['name']." style='color: #c0c0c0 ; text-decoration: none; padding: 0 30px 0 0'  >".$row['name']."</a>";
-				$isBio = true;
-			}
-			if($row['name'] !== ''){
-				$bilo = $bilo . "<a href=".$row['name']." style='color: #c0c0c0 ; text-decoration: none; padding: 0 30px 0 0'  >".$row['name']."</a>";
-				$isBio = true;
-			}
-			if($isBio === true){
-				$bilo = "<div class='dataLabels'><p>$GeneOntology[2]</p></div>
-						<div class='dataBox'>$bilo</div>";
-			}
-			/*
-			 * This is for the Gene Ontology Terms
+			 * This is for the Drug Specifications
 			 *
 			 */
-			if($isCell === true or $isBio === true or $isMole === true){
+			//if the name isn't empty
+			$isDrugBox = false;
+			$drugBox = '';
+			/*You might need to change the checking of an empty cell*/
+			for($i = 0; $i < 8; ++$i){
+				if($row[$entries[$i]] !== ''){
+					$isDrugBox = true;
+					$drugBox = $drugBox . "<div class='dataLabels'><p>$DrugSpec[$i]</p></div>
+										<div class='dataBox'><p style='color: #c0c0c0'>".$row[$entries[$i]]."</p></div>";
+				}
+			}
+			if($isDrugBox === true){
+				$drugBox = $drugBox. "<div class='dataLabels' style='margin-bottom: 20px'>&nbsp;</div><div class='dataBox' style='margin-bottom: 20px'><a href='' style='color:lightskyblue'>".$row[$entries[1]]."</a></div>";
 				echo "<div class='labelHeading'>
-				<p>
-					&nbsp;
-				</p>
-			</div><div class='infoBox'>
-				<p class='infoBoxGoldHeading'>
-					Gene Ontology Terms
-				</p>
-			</div>".$cell.$mol.$bilo;
+					<p>
+						&nbsp;
+					</p>
+				</div><div class='infoBox'>
+					<p class='infoBoxGoldHeading'>
+						Drug Specifications
+					</p>
+				</div>".$drugBox;
 			}
 			/*
-			 * This is for specific Info
+			 * This is for the PDB Info
+			 *
 			 */
-			$isSpecificInfo = false;
-			$specificInfo = "";
-//			Mass
-			if($row['name'] !== ''){
-				$specificInfo = $specificInfo . "<div class='dataLabels'><p>$specificInfoLabels[0]</p></div>
-									<div class='dataBox'><p style='color: #c0c0c0'>".$row['name']."</p></div>";
-				$isSpecificInfo = true;
+			//if the name isn't empty
+			$isPDBInfoBox = false;
+			$PDBInfoBox = '';
+			/*You might need to change the checking of an empty cell*/
+			for($i = 0; $i < 6; ++$i){
+				if($row[$entries[$i]] !== ''){
+					$isPDBInfoBox = true;
+					$PDBInfoBox = $PDBInfoBox . "<div class='dataLabels'><p>$PDBInfo[$i]</p></div>
+											<div class='dataBox'><p style='color: #c0c0c0'>".$row[$entries[$i]]."</p></div>";
+				}
 			}
-//			Number
-			if($row['name'] !== ''){
-				$specificInfo = $specificInfo . "<div class='dataLabels'><p>$specificInfoLabels[1]</p></div>
-										<div class='dataBox'><p style=\"color: #c0c0c0\">".$row['name']."</p></div>";
-				$isSpecificInfo = true;
+			if($isPDBInfoBox === true){
+				echo "<div class='labelHeading'>
+						<p>
+							&nbsp;
+						</p>
+					</div><div class='infoBox'>
+						<p class='infoBoxGoldHeading'>
+							PDB Information
+						</p>
+					</div>".$PDBInfoBox;
 			}
-//			UniProtID
-			if($row['name'] !== ''){
-				$specificInfo = $specificInfo . "<div class=\"dataLabels\"><p>$specificInfoLabels[2]</p></div>
-											<div class=\"dataBox\"><a href=".$row['name']." style=\"color: #c0c0c0 ; text-decoration: none;\"  >".$row['name']."</a></div>";
-				$isSpecificInfo = true;
-			}
-//			EntryID
-			if($row['name'] !== ''){
-				$specificInfo = $specificInfo . "<div class=\"dataLabels\"><p>$specificInfoLabels[3]</p></div>
-												<div class=\"dataBox\"><a href=".$row['name']." style=\"color: #c0c0c0 ; text-decoration: none;\"  >".$row['name']."</a></div>";
-				$isSpecificInfo = true;
-			}
-//			RefSeq
-			if($row['name'] !== ''){
-				$specificInfo = $specificInfo . "<div class=\"dataLabels\"><p>$specificInfoLabels[4]</p></div>
-												<div class=\"dataBox\"><a href=".$row['name']." style=\"color: #c0c0c0 ; text-decoration: none;\"  >".$row['name']."</a></div>";
-				$isSpecificInfo = true;
-			}
-//			Int.ProteinID
-			if($row['name'] !== ''){
-				$specificInfo = $specificInfo . "<div class=\"dataLabels\"><p>$specificInfoLabels[5]</p></div>
-										<div class=\"dataBox\"><p style=\"color: #c0c0c0\">".$row['name']."</p></div>";
-				$isSpecificInfo = true;
-			}
-//			PhosphoID
-			if($row['name'] !== ''){
-				$specificInfo = $specificInfo . "<div class=\"dataLabels\"><p>$specificInfoLabels[6]</p></div>
-													<div class=\"dataBox\"><a href=".$row['name']." style=\"color: #c0c0c0 ; text-decoration: none;\"  >".$row['name']."</a></div>";
-				$isSpecificInfo = true;
-			}
-//			PhosophoPlus
-			if($row['name'] !== ''){
-				$specificInfo = $specificInfo . "<div class=\"dataLabels\"><p>$specificInfoLabels[7]</p></div>
-													<div class=\"dataBox\"><a href=".$row['name']." style=\"color: #c0c0c0 ; text-decoration: none;\"  >".$row['name']."</a></div>";
-				$isSpecificInfo = true;
-			}
-//			KinaseID
-			if($row['name'] !== ''){
-				$specificInfo = $specificInfo . "<div class=\"dataLabels\"><p>$specificInfoLabels[8]</p></div>
-													<div class=\"dataBox\"><a href=".$row['name']." style=\"color: #c0c0c0 ; text-decoration: none;\"  >".$row['name']."</a></div>";
-				$isSpecificInfo = true;
-			}
-//			OncoID
-			if($row['name'] !== ''){
-				$specificInfo = $specificInfo . "<div class=\"dataLabels\"><p>$specificInfoLabels[9]</p></div>
-													<div class=\"dataBox\"><a href=".$row['name']." style=\"color: #c0c0c0 ; text-decoration: none;\"  >".$row['name']."</a></div>";
-				$isSpecificInfo = true;
-			}
-//			PDB Entries
-			if($row['name'] !== ''){
-				$specificInfo = $specificInfo . "<div class=\"dataLabels\"><p>$specificInfoLabels[10]</p></div>
-													<div class=\"dataBox\"><a href=".$row['name']." style=\"color: #c0c0c0 ; text-decoration: none;\"  >".$row['name']."</a></div>";
-				$isSpecificInfo = true;
-			}
-			if($isSpecificInfo === true){
-				echo "<div class=\"labelHeading\">
-				<p>
-					&nbsp;
-				</p>
-				</div><div class=\"infoBox\">
-				<p class=\"infoBoxGoldHeading\">
-					Specific Info
-				</p>
-			</div>".$specificInfo;
-			}
+			echo "<div class='labelHeading'>
+						<p>
+							&nbsp;
+						</p>
+					</div><div class='infoBox' style='width: 340px'>
+						<p class='infoBoxGoldHeading'>
+							Drug Structure
+						</p>
+					</div><div class='infoBox' style='width: 340px'>
+						<p class='infoBoxGoldHeading'>
+							Drug Atom Numbering
+						</p>
+					</div>"
 		?>
 		<!--label for footer-->
 		<div class="labelHeading">
