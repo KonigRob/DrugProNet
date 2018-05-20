@@ -123,10 +123,23 @@
 			$Nomenclature = ["Protein short name:", "Protein full name:", "Alias:", "Protein type:", "Kinase group:",
 							"Kinase family:", "Kinase subfamily:"];
 
+			$columnsForNom = ["B", "C", "D", "G", "H", "I5", "J"];
+
 			$GeneOntology = ["Cell component:", "Molecular function:", "Biological process:"];
+
+			$columnsForCell = ["L", "M", "O"];
+			$linksForCell = ["I", "K", "M"];
+			$columnsForMol = ["Q", "S", "U"];
+			$linksForMol = ["P", "R", "T"];
+			$columnsForBio = ["W", "Y", "AA"];
+			$linksForBio = ["V", "X", "Z"];
 
 			$specificInfoLabels = ["Mass (Da):", "Number AA:", "UniProt ID:", "Entry ID", "NCBI RefSeq ID:", "Int. Protein ID",
 							"PhosphoNET ID:", "PhosphoSItePlus:", "KinaseNET ID:", "OncoNET ID:", "PDB Entries:"];
+
+			$columnsForSpeInfo = ["E", "F", "AC", "AE", "AF", "AH", "AI", "AK", "AC", "AC", "AQ"];
+			$linksForSpecInfo = ["", "", "AD", "AD", "AG", "", "AJ", "AL", "AM", "AN", "AQ"];
+			//https://www.rcsb.org/structure/ with AQ
 
 			$entries = ["name", "name", "name", "name", "name", "name", "name", "name", "name", "name", "name", "name", "name",
 						"name", "name", "name", "name", "name", "name", "name", "name"];
@@ -140,10 +153,12 @@
 			$nomBox = '';
 			/*You might need to change the checking of an empty cell*/
 			for($i = 0; $i < 7; ++$i){
-				if($row[$entries[$i]] !== ''){
+//				$index = $row[$columnsForNom[$i];
+				$index = $row[$entries[$i]];
+				if($index !== ''){
 					$isNomBox = true;
 					$nomBox = $nomBox . "<div class='dataLabels'><p>$Nomenclature[$i]</p></div>
-									<div class='dataBox'><p style='color: #c0c0c0'>".$row[$entries[$i]]."</p></div>";
+									<div class='dataBox'><p style='color: #c0c0c0'>".$index."</p></div>";
 				}
 			}
 			if($isNomBox === true){
@@ -162,39 +177,34 @@
 			 */
 			$isCell = false;
 			$cell = "";
-			if($row['name'] !== ''){
-				$cell = $cell . "<a href=".$row['name']." style='color: #c0c0c0 ; text-decoration: none; padding: 0 30px 0 0'  >".$row['name']."</a>";
-				$isCell = true;
-			}
-			if($row['name'] !== ''){
-				$cell = $cell . "<a href=".$row['name']." style='color: #c0c0c0 ; text-decoration: none; padding: 0 30px 0 0'  >".$row['name']."</a>";
-				$isCell = true;
-			}
-			if($row['name'] !== ''){
-				$cell = $cell . "<a href=".$row['name']." style='color: #c0c0c0 ; text-decoration: none; padding: 0 30px 0 0'  >".$row['name']."</a>";
-				$isCell = true;
+			for($i = 0; $i < 3; ++$i){
+//				$index = $row[$columnsForCell[$i]];
+				$index = $row[$entries[$i]];
+//				$links = $row[$linksForCell[$i]];
+				$links = $row[$entries[$i]];
+				if($index !== ''){
+					$cell = $cell . "<a href=".$links." style='color: #c0c0c0 ; text-decoration: none; padding: 0 30px 0 0'  >".$index."</a>";
+					$isCell = true;
+				}
 			}
 			if($isCell === true){
 				$cell = "<div class='dataLabels'><p>$GeneOntology[0]</p></div>
 						<div class='dataBox'>$cell</div>";
-//				$cell = "<div class='dataLabels'>$cell</div></div>";
 			}
 			/*
 			 * This is for Molecular
 			 */
 			$isMole = false;
 			$mol = "";
-			if($row['name'] !== ''){
-				$mol = $mol . "<a href=".$row['name']." style='color: #c0c0c0 ; text-decoration: none; padding: 0 30px 0 0'  >".$row['name']."</a>";
-				$isMole = true;
-			}
-			if($row['name'] !== ''){
-				$mol = $mol . "<a href=".$row['name']." style='color: #c0c0c0 ; text-decoration: none; padding: 0 30px 0 0'  >".$row['name']."</a>";
-				$isMole = true;
-			}
-			if($row['name'] !== ''){
-				$mol = $mol . "<a href=".$row['name']." style='color: #c0c0c0 ; text-decoration: none; padding: 0 30px 0 0'  >".$row['name']."</a>";
-				$isMole = true;
+			for($i = 0; $i < 3; ++$i){
+//				$index = $row[$columnsForMol[$i]];
+				$index = $row[$entries[$i]];
+//				$links = $row[$linksForMol[$i]];
+				$links = $row[$entries[$i]];
+				if($index !== ''){
+					$mol = $mol . "<a href=".$links." style='color: #c0c0c0 ; text-decoration: none; padding: 0 30px 0 0'  >".$index."</a>";
+					$isMole = true;
+				}
 			}
 			if($isMole === true){
 				$mol = "<div class='dataLabels'><p>$GeneOntology[1]</p></div>
@@ -205,17 +215,15 @@
 			 */
 			$isBio = false;
 			$bilo = "";
-			if($row['name'] !== ''){
-				$bilo = $bilo . "<a href=".$row['name']." style='color: #c0c0c0 ; text-decoration: none; padding: 0 30px 0 0'  >".$row['name']."</a>";
-				$isBio = true;
-			}
-			if($row['name'] !== ''){
-				$bilo = $bilo . "<a href=".$row['name']." style='color: #c0c0c0 ; text-decoration: none; padding: 0 30px 0 0'  >".$row['name']."</a>";
-				$isBio = true;
-			}
-			if($row['name'] !== ''){
-				$bilo = $bilo . "<a href=".$row['name']." style='color: #c0c0c0 ; text-decoration: none; padding: 0 30px 0 0'  >".$row['name']."</a>";
-				$isBio = true;
+			for($i = 0; $i < 3; ++$i){
+//				$index = $row[$columnsForBio[$i]];
+				$index = $row[$entries[$i]];
+//				$links = $row[$linksForBio[$i]];
+				$links = $row[$entries[$i]];
+				if($index !== ''){
+					$bilo = $bilo . "<a href=".$links." style='color: #c0c0c0 ; text-decoration: none; padding: 0 30px 0 0'  >".$index."</a>";
+					$isBio = true;
+				}
 			}
 			if($isBio === true){
 				$bilo = "<div class='dataLabels'><p>$GeneOntology[2]</p></div>
@@ -241,71 +249,24 @@
 			 */
 			$isSpecificInfo = false;
 			$specificInfo = "";
-//			Mass
-			if($row['name'] !== ''){
-				$specificInfo = $specificInfo . "<div class='dataLabels'><p>$specificInfoLabels[0]</p></div>
-									<div class='dataBox'><p style='color: #c0c0c0'>".$row['name']."</p></div>";
-				$isSpecificInfo = true;
-			}
-//			Number
-			if($row['name'] !== ''){
-				$specificInfo = $specificInfo . "<div class='dataLabels'><p>$specificInfoLabels[1]</p></div>
-										<div class='dataBox'><p style=\"color: #c0c0c0\">".$row['name']."</p></div>";
-				$isSpecificInfo = true;
-			}
-//			UniProtID
-			if($row['name'] !== ''){
-				$specificInfo = $specificInfo . "<div class=\"dataLabels\"><p>$specificInfoLabels[2]</p></div>
-											<div class=\"dataBox\"><a href=".$row['name']." style=\"color: #c0c0c0 ; text-decoration: none;\"  >".$row['name']."</a></div>";
-				$isSpecificInfo = true;
-			}
-//			EntryID
-			if($row['name'] !== ''){
-				$specificInfo = $specificInfo . "<div class=\"dataLabels\"><p>$specificInfoLabels[3]</p></div>
-												<div class=\"dataBox\"><a href=".$row['name']." style=\"color: #c0c0c0 ; text-decoration: none;\"  >".$row['name']."</a></div>";
-				$isSpecificInfo = true;
-			}
-//			RefSeq
-			if($row['name'] !== ''){
-				$specificInfo = $specificInfo . "<div class=\"dataLabels\"><p>$specificInfoLabels[4]</p></div>
-												<div class=\"dataBox\"><a href=".$row['name']." style=\"color: #c0c0c0 ; text-decoration: none;\"  >".$row['name']."</a></div>";
-				$isSpecificInfo = true;
-			}
-//			Int.ProteinID
-			if($row['name'] !== ''){
-				$specificInfo = $specificInfo . "<div class=\"dataLabels\"><p>$specificInfoLabels[5]</p></div>
-										<div class=\"dataBox\"><p style=\"color: #c0c0c0\">".$row['name']."</p></div>";
-				$isSpecificInfo = true;
-			}
-//			PhosphoID
-			if($row['name'] !== ''){
-				$specificInfo = $specificInfo . "<div class=\"dataLabels\"><p>$specificInfoLabels[6]</p></div>
-													<div class=\"dataBox\"><a href=".$row['name']." style=\"color: #c0c0c0 ; text-decoration: none;\"  >".$row['name']."</a></div>";
-				$isSpecificInfo = true;
-			}
-//			PhosophoPlus
-			if($row['name'] !== ''){
-				$specificInfo = $specificInfo . "<div class=\"dataLabels\"><p>$specificInfoLabels[7]</p></div>
-													<div class=\"dataBox\"><a href=".$row['name']." style=\"color: #c0c0c0 ; text-decoration: none;\"  >".$row['name']."</a></div>";
-				$isSpecificInfo = true;
-			}
-//			KinaseID
-			if($row['name'] !== ''){
-				$specificInfo = $specificInfo . "<div class=\"dataLabels\"><p>$specificInfoLabels[8]</p></div>
-													<div class=\"dataBox\"><a href=".$row['name']." style=\"color: #c0c0c0 ; text-decoration: none;\"  >".$row['name']."</a></div>";
-				$isSpecificInfo = true;
-			}
-//			OncoID
-			if($row['name'] !== ''){
-				$specificInfo = $specificInfo . "<div class=\"dataLabels\"><p>$specificInfoLabels[9]</p></div>
-													<div class=\"dataBox\"><a href=".$row['name']." style=\"color: #c0c0c0 ; text-decoration: none;\"  >".$row['name']."</a></div>";
-				$isSpecificInfo = true;
-			}
-//			PDB Entries
-			if($row['name'] !== ''){
-				$specificInfo = $specificInfo . "<div class=\"dataLabels\"><p>$specificInfoLabels[10]</p></div>
-													<div class=\"dataBox\"><a href=".$row['name']." style=\"color: #c0c0c0 ; text-decoration: none;\"  >".$row['name']."</a></div>";
-				$isSpecificInfo = true;
+			for($i = 0; $i < 11; ++$i){
+//				$index = $row[$columnsForSpeInfo[$i];
+				$index = $row[$entries[$i]];
+//				$links = $row[$linksForSpecInfo[$i]];
+				$links = $row[$entries[$i]];
+				if($i !== 0 and $i !== 1 and $i !== 5){
+					if($index !== ''){
+						$specificInfo = $specificInfo . "<div class=\"dataLabels\"><p>$specificInfoLabels[$i]</p></div>
+											<div class=\"dataBox\"><a href=".$links." style=\"color: #c0c0c0 ; text-decoration: none;\"  >".$index."</a></div>";
+						$isSpecificInfo = true;
+					}
+				} else {
+					if($index !== ''){
+						$specificInfo = $specificInfo . "<div class='dataLabels'><p>$specificInfoLabels[$i]</p></div>
+									<div class='dataBox'><p style='color: #c0c0c0'>".$index."</p></div>";
+						$isSpecificInfo = true;
+					}
+				}
 			}
 			if($isSpecificInfo === true){
 				echo "<div class=\"labelHeading\">

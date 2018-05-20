@@ -124,14 +124,22 @@
 
 			$ProSpec = ["Protein Name:", "Protein Full Name:", "Alias:", "UniProt ID:", "NCBI ID:",
 							"Protein Type", "Kinase Group:", "Kinase Family:", "Number AA:", "Mass (Da):"];
+			$columnForProSpec = ["AC", "AF", "AG", "Y", "Z", "AI", "AL", "AM", "AE", "AD"];
 
 			$DrugSpec = ["PDB Drug ID:", "Drug Short Name:", "Drug Chemical:", "Name:", "Drug Alias:", "Drug Formula:",
-						"Mass (Da):", "Potency:"];
+						"Mass (Da):"];
+			$columnForDrugSpec = ["C", "G", "H", "I", "J", "K"];
+
+			$DrugSpecLast = ["IC50(nM)", "Ki(nM)", "Kd(nM)"];
+			$columnForLast = ["V", "W", "X"];
 
 			$PDBInfo = ["PDB Entry:", "Release Date:", "Resolution:", "Title:", "Authors:", "Reference"];
+			$columnForPDBInfo = ["D", "R", "P", "S", "T", "U"];
 
 			$entries = ["name", "name", "name", "name", "name", "name", "name", "name", "name", "name", "name", "name", "name",
 						"name", "name", "name", "name", "name", "name", "name", "name"];
+
+
 
 			/*
 			 * This is for the Protein Specifications
@@ -142,14 +150,16 @@
 			$proBox = '';
 			/*You might need to change the checking of an empty cell*/
 			for($i = 0; $i < 7; ++$i){
-				if($row[$entries[$i]] !== ''){
+//				$index = $row[$columnForProSpec[$i]];
+				$index = $row[$entries[$i]];
+				if($index !== ''){
 					$isProBox = true;
 					$proBox = $proBox . "<div class='dataLabels'><p>$ProSpec[$i]</p></div>
-									<div class='dataBox'><p style='color: #c0c0c0'>".$row[$entries[$i]]."</p></div>";
+									<div class='dataBox'><p style='color: #c0c0c0'>".$index."</p></div>";
 				}
 			}
 			if($isProBox === true){
-				$proBox = $proBox. "<div class='dataLabels' style='margin-bottom: 20px'>&nbsp;</div><div class='dataBox' style='margin-bottom: 20px'><a href='' style='color:lightskyblue'>".$row[$entries[1]]."</a></div>";
+				$proBox = $proBox. "<div class='dataLabels' style='margin-bottom: 20px'>&nbsp;</div><div class='dataBox' style='margin-bottom: 20px'><a href='' style='color:lightskyblue'>Link to further protein information</a></div>";
 				echo "<div class='labelHeading'>
 				<p>
 					&nbsp;
@@ -165,18 +175,34 @@
 			 *
 			 */
 			//if the name isn't empty
-			$isDrugBox = false;
+			$isDrugBoxA = false;
 			$drugBox = '';
 			/*You might need to change the checking of an empty cell*/
-			for($i = 0; $i < 8; ++$i){
-				if($row[$entries[$i]] !== ''){
-					$isDrugBox = true;
+			for($i = 0; $i < 7; ++$i){
+//				$index = $row[$columnForProSpec[$i]];
+				$index = $row[$entries[$i]];
+				if($index !== ''){
+					$isDrugBoxA = true;
 					$drugBox = $drugBox . "<div class='dataLabels'><p>$DrugSpec[$i]</p></div>
-										<div class='dataBox'><p style='color: #c0c0c0'>".$row[$entries[$i]]."</p></div>";
+										<div class='dataBox'><p style='color: #c0c0c0'>".$index."</p></div>";
 				}
 			}
-			if($isDrugBox === true){
-				$drugBox = $drugBox. "<div class='dataLabels' style='margin-bottom: 20px'>&nbsp;</div><div class='dataBox' style='margin-bottom: 20px'><a href='' style='color:lightskyblue'>".$row[$entries[1]]."</a></div>";
+			$isDrugBoxB = false;
+			$potency = '';
+			for($i = 0; $i < 3; ++$i){
+//				$index = $row[$columnForLast[$i]];
+				$index = $row[$entries[$i]];
+				if($index !== ''){
+					$isDrugBoxB = true;
+					$potency = $potency . "$DrugSpecLast[$i]: $index; ";
+				}
+			}
+			if($isDrugBoxB === true){
+				$drugBox = $drugBox . "<div class='dataLabels'><p>Potency:</p></div>
+										<div class='dataBox'><p style='color: #c0c0c0'>".$potency."</p></div>";
+			}
+			if($isDrugBoxA === true or $isDrugBoxB === true){
+				$drugBox = $drugBox. "<div class='dataLabels' style='margin-bottom: 20px'>&nbsp;</div><div class='dataBox' style='margin-bottom: 20px'><a href='' style='color:lightskyblue'>Link to further protein information</a></div>";
 				echo "<div class='labelHeading'>
 					<p>
 						&nbsp;
@@ -196,10 +222,12 @@
 			$PDBInfoBox = '';
 			/*You might need to change the checking of an empty cell*/
 			for($i = 0; $i < 6; ++$i){
-				if($row[$entries[$i]] !== ''){
+//				$index = $row[$columnForPDBInfo[$i]];
+				$index = $row[$entries[$i]];
+				if($index !== ''){
 					$isPDBInfoBox = true;
 					$PDBInfoBox = $PDBInfoBox . "<div class='dataLabels'><p>$PDBInfo[$i]</p></div>
-											<div class='dataBox'><p style='color: #c0c0c0'>".$row[$entries[$i]]."</p></div>";
+											<div class='dataBox'><p style='color: #c0c0c0'>".$index."</p></div>";
 				}
 			}
 			if($isPDBInfoBox === true){
