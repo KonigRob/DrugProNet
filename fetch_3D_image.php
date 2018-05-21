@@ -33,20 +33,7 @@
                         'Default view of PDB structure.' // Default PDB view text
                     )
                 );
-
-                register_global_animation_loop(
-                    new EmbedJolecule(
-                        '1bfe', // pdb_id
-                        '',  // view_id
-                        '#mobile-body2', // html tag
-                        new ExampleEmbededDataServer(), // type of data server
-                        130, // height of the annotation text area
-                        'Loading PDB...', // Loading msg
-                        'Failed to load PDB.', // Loading failure msg
-                        'Default view of PDB structure.' // Default PDB view text
-                    )
-                );
-
+                
             }
         );
     </script>
