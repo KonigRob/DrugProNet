@@ -4,6 +4,31 @@
 	padding-top: 20px;
 }
 
+.dataLabels{
+	clear: both;
+	width: 174px;
+	text-align: right;
+	float: left;
+	color: #708591;
+	padding: 0 8px;
+	font-size: 14px;
+	box-sizing: inherit;
+}
+
+.dataLabels p{
+	color: #708591;
+	font-size: 15px;
+	margin-bottom: 10px;
+	line-height: 150%;
+}
+
+.dataBox{
+	box-sizing: inherit;
+	padding: 0 20px;
+	width: 760px;
+	float: left;
+}
+
 .labelHeading{
 	clear: both;
 	width: 174px;
@@ -37,8 +62,6 @@
 	margin-bottom: 8px;
 	font-weight: bold;
 }
-
-
 
 .infoBox{
 	box-sizing: inherit;
@@ -130,3 +153,5 @@
 	border-bottom-left-radius: 7px;
 	border-bottom-right-radius: 7px;
 }
+
+
