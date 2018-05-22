@@ -108,7 +108,7 @@
 			$servername = "localhost";
 			$username = "root";
 			$password = "yellow";
-			$dbname = "dyidb";
+			$dbname = "Genexus";
 
 			$db = mysqli_connect($servername, $username, $password) or
 			die(mysqli_connect_error());
@@ -124,17 +124,18 @@
 
 			$ProSpec = ["Protein Name:", "Protein Full Name:", "Alias:", "UniProt ID:", "NCBI ID:",
 							"Protein Type", "Kinase Group:", "Kinase Family:", "Number AA:", "Mass (Da):"];
-			$columnForProSpec = ["AC", "AF", "AG", "Y", "Z", "AI", "AL", "AM", "AE", "AD"];
+			$columnForProSpec = ["Protein Short Name", "Protein Full Name", "Protein Combined Alias", "Uniprot", "RefSeq ID",
+						"Protein Type General", "Kinase Group", "Kinase Family", "Protein Number of AA", "Protein Molecular Mass "];
 
 			$DrugSpec = ["PDB Drug ID:", "Drug Short Name:", "Drug Chemical:", "Name:", "Drug Alias:", "Drug Formula:",
 						"Mass (Da):"];
-			$columnForDrugSpec = ["C", "G", "H", "I", "J", "K"];
+			$columnForDrugSpec = ["Drug PDB No", "Drug Common Name", "Drug Chemical Name", "Drug Name Alias", "Drug Formula", "Drug MW"];
 
 			$DrugSpecLast = ["IC50(nM)", "Ki(nM)", "Kd(nM)"];
-			$columnForLast = ["V", "W", "X"];
+			$columnForLast = ["IC50(nM)", "Ki(nM)", "Kd(nM)"];
 
 			$PDBInfo = ["PDB Entry:", "Release Date:", "Resolution:", "Title:", "Authors:", "Reference"];
-			$columnForPDBInfo = ["D", "R", "P", "S", "T", "U"];
+			$columnForPDBInfo = ["PDB File No", "PDB Released", "Resolution (Å)", "PDB Entry Title", "Authors", "Journal Reference"];
 
 			$entries = ["name", "name", "name", "name", "name", "name", "name", "name", "name", "name", "name", "name", "name",
 						"name", "name", "name", "name", "name", "name", "name", "name"];
@@ -150,8 +151,8 @@
 			$proBox = '';
 			/*You might need to change the checking of an empty cell*/
 			for($i = 0; $i < 7; ++$i){
-//				$index = $row[$columnForProSpec[$i]];
-				$index = $row[$entries[$i]];
+				$index = $row[$columnForProSpec[$i]];
+//				$index = $row[$entries[$i]];
 				if($index !== ''){
 					$isProBox = true;
 					$proBox = $proBox . "<div class='dataLabels'><p>$ProSpec[$i]</p></div>
@@ -179,8 +180,8 @@
 			$drugBox = '';
 			/*You might need to change the checking of an empty cell*/
 			for($i = 0; $i < 7; ++$i){
-//				$index = $row[$columnForProSpec[$i]];
-				$index = $row[$entries[$i]];
+				$index = $row[$columnForProSpec[$i]];
+//				$index = $row[$entries[$i]];
 				if($index !== ''){
 					$isDrugBoxA = true;
 					$drugBox = $drugBox . "<div class='dataLabels'><p>$DrugSpec[$i]</p></div>
@@ -190,8 +191,8 @@
 			$isDrugBoxB = false;
 			$potency = '';
 			for($i = 0; $i < 3; ++$i){
-//				$index = $row[$columnForLast[$i]];
-				$index = $row[$entries[$i]];
+				$index = $row[$columnForLast[$i]];
+//				$index = $row[$entries[$i]];
 				if($index !== ''){
 					$isDrugBoxB = true;
 					$potency = $potency . "$DrugSpecLast[$i]: $index; ";
@@ -222,8 +223,8 @@
 			$PDBInfoBox = '';
 			/*You might need to change the checking of an empty cell*/
 			for($i = 0; $i < 6; ++$i){
-//				$index = $row[$columnForPDBInfo[$i]];
-				$index = $row[$entries[$i]];
+				$index = $row[$columnForPDBInfo[$i]];
+//				$index = $row[$entries[$i]];
 				if($index !== ''){
 					$isPDBInfoBox = true;
 					$PDBInfoBox = $PDBInfoBox . "<div class='dataLabels'><p>$PDBInfo[$i]</p></div>

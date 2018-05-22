@@ -13,8 +13,8 @@ if(session_status() == PHP_SESSION_NONE){
 
 $servername = 'localhost';
 $dblogin = 'root';
-$password = 'yellow';
-$dbname = 'dyidb';
+$password = '';
+$dbname = 'Genexus';
 
 $data = array('mes' => 'Nothing');
 

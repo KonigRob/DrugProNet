@@ -105,8 +105,8 @@
 			 */
 			$servername = "localhost";
 			$username = "root";
-			$password = "yellow";
-			$dbname = "dyidb";
+			$password = "";
+			$dbname = "Genexus";
 
 			$db = mysqli_connect($servername, $username, $password) or
 			die(mysqli_connect_error());
@@ -123,23 +123,25 @@
 			$Nomenclature = ["Protein short name:", "Protein full name:", "Alias:", "Protein type:", "Kinase group:",
 							"Kinase family:", "Kinase subfamily:"];
 
-			$columnsForNom = ["B", "C", "D", "G", "H", "I5", "J"];
+			$columnsForNom = ["Protein Short Name", "Protein Full Name", "Protein Alias", "Protein Type Specific", "Kinase Group",
+								"Kinase Family", "Kinase Subfamily"];
 
 			$GeneOntology = ["Cell component:", "Molecular function:", "Biological process:"];
 
-			$columnsForCell = ["L", "M", "O"];
-			$linksForCell = ["I", "K", "M"];
-			$columnsForMol = ["Q", "S", "U"];
-			$linksForMol = ["P", "R", "T"];
-			$columnsForBio = ["W", "Y", "AA"];
-			$linksForBio = ["V", "X", "Z"];
+			$columnsForCell = ["GOCelComponent1", "GOCelComponent2", "GOCelComponent3"];
+			$linksForCell = ["GOCelComponent1URL", "GOCelComponent2URL", "GOCelComponent3URL"];
+			$columnsForMol = ["GOMolFunction1", "GOMolFunction2", "GOMolFunction3"];
+			$linksForMol = ["GOMolFunction1URL", "GOMolFunction2URL", "GOMolFunction3URL"];
+			$columnsForBio = ["GOBioProcess1", "GOBioProcess2", "GOBioProcess3"];
+			$linksForBio = ["GOBioProcess1URL", "GOBioProcess2URL", "GOBioProcess3URL"];
 
 			$specificInfoLabels = ["Mass (Da):", "Number AA:", "UniProt ID:", "Entry ID", "NCBI RefSeq ID:", "Int. Protein ID",
 							"PhosphoNET ID:", "PhosphoSItePlus:", "KinaseNET ID:", "OncoNET ID:", "PDB Entries:"];
 
-			$columnsForSpeInfo = ["E", "F", "AC", "AE", "AF", "AH", "AI", "AK", "AC", "AC", "AQ"];
-			$linksForSpecInfo = ["", "", "AD", "AD", "AG", "", "AJ", "AL", "AM", "AN", "AQ"];
-			//https://www.rcsb.org/structure/ with AQ
+			$columnsForSpeInfo = ["Protein Mass", "Protein AA Number", "Uniprot ID", "Entry ID", "RefSeq ID", "International Prot ID",
+						"PhosphoNET Name", "PhosphoSIte Plus Entry", "Uniprot ID", "Uniprot ID", "PDB File No."];
+			$linksForSpecInfo = ["", "", "UniProt Entry URL", "UniProt Entry URL", "RefSeq ID URL", "", "PhosphoNET URL",
+						"PhosphoSIte Plus Entry URL", "KinaseNET URL", "OncoNET URL", "PDB File No."];
 
 			$entries = ["name", "name", "name", "name", "name", "name", "name", "name", "name", "name", "name", "name", "name",
 						"name", "name", "name", "name", "name", "name", "name", "name"];
@@ -153,8 +155,8 @@
 			$nomBox = '';
 			/*You might need to change the checking of an empty cell*/
 			for($i = 0; $i < 7; ++$i){
-//				$index = $row[$columnsForNom[$i];
-				$index = $row[$entries[$i]];
+				$index = $row[$columnsForNom[$i]];
+//				$index = $row[$entries[$i]];
 				if($index !== ''){
 					$isNomBox = true;
 					$nomBox = $nomBox . "<div class='dataLabels'><p>$Nomenclature[$i]</p></div>
@@ -178,10 +180,10 @@
 			$isCell = false;
 			$cell = "";
 			for($i = 0; $i < 3; ++$i){
-//				$index = $row[$columnsForCell[$i]];
-				$index = $row[$entries[$i]];
-//				$links = $row[$linksForCell[$i]];
-				$links = $row[$entries[$i]];
+				$index = $row[$columnsForCell[$i]];
+//				$index = $row[$entries[$i]];
+				$links = $row[$linksForCell[$i]];
+//				$links = $row[$entries[$i]];
 				if($index !== ''){
 					$cell = $cell . "<a href=".$links." style='color: #c0c0c0 ; text-decoration: none; padding: 0 30px 0 0'  >".$index."</a>";
 					$isCell = true;
@@ -197,10 +199,10 @@
 			$isMole = false;
 			$mol = "";
 			for($i = 0; $i < 3; ++$i){
-//				$index = $row[$columnsForMol[$i]];
-				$index = $row[$entries[$i]];
-//				$links = $row[$linksForMol[$i]];
-				$links = $row[$entries[$i]];
+				$index = $row[$columnsForMol[$i]];
+//				$index = $row[$entries[$i]];
+				$links = $row[$linksForMol[$i]];
+//				$links = $row[$entries[$i]];
 				if($index !== ''){
 					$mol = $mol . "<a href=".$links." style='color: #c0c0c0 ; text-decoration: none; padding: 0 30px 0 0'  >".$index."</a>";
 					$isMole = true;
@@ -216,10 +218,10 @@
 			$isBio = false;
 			$bilo = "";
 			for($i = 0; $i < 3; ++$i){
-//				$index = $row[$columnsForBio[$i]];
-				$index = $row[$entries[$i]];
-//				$links = $row[$linksForBio[$i]];
-				$links = $row[$entries[$i]];
+				$index = $row[$columnsForBio[$i]];
+//				$index = $row[$entries[$i]];
+				$links = $row[$linksForBio[$i]];
+//				$links = $row[$entries[$i]];
 				if($index !== ''){
 					$bilo = $bilo . "<a href=".$links." style='color: #c0c0c0 ; text-decoration: none; padding: 0 30px 0 0'  >".$index."</a>";
 					$isBio = true;
@@ -250,11 +252,18 @@
 			$isSpecificInfo = false;
 			$specificInfo = "";
 			for($i = 0; $i < 11; ++$i){
-//				$index = $row[$columnsForSpeInfo[$i];
-				$index = $row[$entries[$i]];
-//				$links = $row[$linksForSpecInfo[$i]];
-				$links = $row[$entries[$i]];
-				if($i !== 0 and $i !== 1 and $i !== 5){
+				$index = $row[$columnsForSpeInfo[$i]];
+//				$index = $row[$entries[$i]];
+				$links = $row[$linksForSpecInfo[$i]];
+//				$links = $row[$entries[$i]];
+				if($i === 10){
+					if($index !== ''){
+						$specificInfo = $specificInfo . "<div class=\"dataLabels\"><p>$specificInfoLabels[$i]</p></div>
+											<div class=\"dataBox\"><a href=https://www.rcsb.org/structure/".$links." style=\"color: #c0c0c0 ; text-decoration: none;\"  >".$index."</a></div>";
+						$isSpecificInfo = true;
+					}
+				}
+				else if($i !== 0 and $i !== 1 and $i !== 5){
 					if($index !== ''){
 						$specificInfo = $specificInfo . "<div class=\"dataLabels\"><p>$specificInfoLabels[$i]</p></div>
 											<div class=\"dataBox\"><a href=".$links." style=\"color: #c0c0c0 ; text-decoration: none;\"  >".$index."</a></div>";
